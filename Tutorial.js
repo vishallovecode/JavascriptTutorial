@@ -34,3 +34,56 @@ console.log(firstName, middleName, lastName);
 // typeof keyword will tell you what is the data type of variable
 
 console.log(typeof middleName, typeof lastName, typeof firstName);
+
+// this part we will later this for explanation dont consider it for now
+// document.getElementById("navbar").innerHTML = firstName + lastName + middleName;
+// document.getElementById("button").addEventListener("click", () => {
+//   alert("hi");
+// });
+
+// dynamic type conversion
+
+var a = `Vishal`; // typeof a = string
+console.log(typeof a);
+a = 1234; // typeof a number
+console.log(typeof a);
+var a = 234; // this will not give any error re-declaration allowed for var variable
+console.log(a);
+
+// for declaring new variable you need to use either var , let and const
+
+console.log(window.a);
+console.log(a);
+
+// variable terms nothing about type (let var const)
+b = 30; // =>  var b=30 ; this will be directly attached with the window object
+console.log(b);
+
+// Javascript Language are case sensitive
+
+// window is nothing it is the simple object having key and value pair
+
+// number
+
+var c = 40.123;
+console.log(typeof c);
+
+// how many types are there in js main
+
+// number
+// string
+// boolean
+// BigInt
+// Object
+// Symbol
+// undefined
+//  null
+
+// any mathmatical number whether float , integrer , negative number all will be type of number in js
+
+// Infinity
+// -Infinity
+
+// InterView Important Questions
+console.log("positive=>", typeof Infinity);
+console.log("negative=> ", typeof -Infinity);
