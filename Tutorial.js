@@ -1,5 +1,7 @@
 // console.log("First Javascript code line");
 
+const json5 = require("json5");
+
 // chrome developer tools
 
 // browser developer tools
@@ -59,7 +61,7 @@ console.log(a);
 b = 30; // =>  var b=30 ; this will be directly attached with the window object
 console.log(b);
 
-// Javascript Language are case sensitive
+// Javascript Language is case sensitive
 
 // window is nothing it is the simple object having key and value pair
 
@@ -69,7 +71,6 @@ var c = 40.123;
 console.log(typeof c);
 
 // how many types are there in js main
-
 // number
 // string
 // boolean
@@ -80,10 +81,18 @@ console.log(typeof c);
 //  null
 
 // any mathmatical number whether float , integrer , negative number all will be type of number in js
-
+// below are the keywords provided by the JS
 // Infinity
 // -Infinity
 
 // InterView Important Questions
-console.log("positive=>", typeof Infinity);
-console.log("negative=> ", typeof -Infinity);
+console.log("positive=>", typeof Infinity); // Number
+console.log("negative=> ", typeof -Infinity); // Number
+
+//  boolean
+
+var check = true;
+// typeof always return the string avlue
+console.log(typeof check);
+const checker = typeof check; // => 'boolean'
+console.log(typeof checker); // what  type exactly typeof return  => typeof always return string type
