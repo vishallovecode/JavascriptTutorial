@@ -94,6 +94,12 @@ var ls = "Vishal";
 var ls2 = " ";
 console.log(Boolean(ls)); // true
 console.log(Boolean(ls2)); // false
+console.log(Boolean(-0)); // false
+console.log(Boolean(0)); // false
+console.log(Boolean(1)); // true
+console.log(Boolean(-11)); // true
+console.log(Boolean([])); // true
+console.log(Boolean({})); // true
 
 // git status
 
@@ -101,3 +107,28 @@ console.log(Boolean(ls2)); // false
 // // alternat git add file_name
 // git commit  -m  'any message regarding your changes'
 // git push
+
+// Conveerting in string
+
+var num3 = 12345;
+console.log(typeof num3); // number
+
+var num3s = String(num3);
+console.log(typeof num3s); // string
+
+// Equlity Operator
+
+// Loose coupled equality ==
+// Type coupled eqaulity  ===
+
+// Note:5 => Double equal operator only compare the value it does not care about the data type
+// if value is equal than it will return true whether it is number or string or another data type
+
+// Note:5 => Triple equal operator  compare the value  it  and its type as well
+// if value is equal or data type is equal than only it will return true
+
+var p = 20;
+var m = "20";
+console.log("==", p == m); // true // == is comparing the value of p and m it does not checking its type
+
+console.log("===", p === m); // false // ==- is comparing the value of p and m it is alos checking its type
