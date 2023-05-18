@@ -94,3 +94,10 @@ var ls = "Vishal";
 var ls2 = " ";
 console.log(Boolean(ls)); // true
 console.log(Boolean(ls2)); // false
+
+// git status
+
+// git add .  //(for adding all the local changes)
+// // alternat git add file_name
+// git commit  -m  'any message regarding your changes'
+// git push
