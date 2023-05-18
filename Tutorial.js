@@ -93,6 +93,6 @@ console.log("negative=> ", typeof -Infinity); // Number
 
 var check = true;
 // typeof always return the string avlue
-console.log(typeof check);
+console.log(typeof check); // 'boolean'
 const checker = typeof check; // => 'boolean'
-console.log(typeof checker); // what  type exactly typeof return  => typeof always return string type
+console.log(typeof checker); //string// what  type exactly typeof return  => typeof always return string type
