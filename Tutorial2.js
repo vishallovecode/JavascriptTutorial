@@ -192,3 +192,47 @@ console.log(minus2);
 //EX:  value1+value2
 // if value1 is numeric string and value2 is numeric string operator will convert numeric to the number and apply the its working
 // Any mathmaticl applied b/w two value will convert value into number if any of that number is numeric string
+
+// isNaN => this is javascript inbuilt function
+
+// this is the function which will return true if the parameter of this function is string
+
+// isNaN(param)
+// global  => window
+
+var value1 = "vishal"; // THIS IS NOT A NUMBER
+
+console.log(isNaN(value1)); // TRUE
+
+var valu2 = "23450"; // THIS NUMERIC STRING
+
+console.log(isNaN(valu2)); // FALSE
+
+var valu3 = "23";
+
+console.log(isNaN(valu2)); // FALSE
+
+var value = 23;
+
+console.log(isNaN(value)); // FALSE
+
+// Comparison Operator
+// == ,  ===
+// < , > ,<=, >=
+
+console.log(2 > 3); // false
+console.log(2 < 3); // true
+
+// console.log(' "2" < 3', "2" < 3);
+
+console.log("A" < "B"); //  true
+console.log("a" < "A"); // FALSE
+
+console.log(' "2" < 3', "2" < 3);
+
+console.log("checker::");
+
+console.log(true == "Vishal");
+console.log(true == 1);
+console.log(false == 0);
+console.log(false == "");
