@@ -1,7 +1,5 @@
 // console.log("First Javascript code line");
 
-const json5 = require("json5");
-
 // chrome developer tools
 
 // browser developer tools

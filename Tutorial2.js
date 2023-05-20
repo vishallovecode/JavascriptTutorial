@@ -6,7 +6,7 @@ console.log("Hey");
 
 // Implicit Type Conversion
 
-var details = 20 + " Vishal"; // convert 20 into string and + operatoor will concatenate two string;
+var details = 20 + " Vishal"; // 20 Vishal convert 20 into string and + operatoor will concatenate two string;
 
 // Note:1 => All the string except empty string javascript consider a true value
 // Note: 2 => all the number except 0 and -0 Javascript consider a true value
@@ -91,7 +91,7 @@ console.log(floatNumber1);
 // converting into the boolean
 
 var ls = "Vishal";
-var ls2 = " ";
+var ls2 = "";
 console.log(Boolean(ls)); // true
 console.log(Boolean(ls2)); // false
 console.log(Boolean(-0)); // false
@@ -124,11 +124,66 @@ console.log(typeof num3s); // string
 // Note:5 => Double equal operator only compare the value it does not care about the data type
 // if value is equal than it will return true whether it is number or string or another data type
 
-// Note:5 => Triple equal operator  compare the value  it  and its type as well
+// Note:5 => Triple equal operator  compare the value   and its type as well
 // if value is equal or data type is equal than only it will return true
 
 var p = 20;
 var m = "20";
 console.log("==", p == m); // true // == is comparing the value of p and m it does not checking its type
 
-console.log("===", p === m); // false // ==- is comparing the value of p and m it is alos checking its type
+console.log("===", p === m); // false // ==- is comparing the value of p and m it is also checking its type
+
+// Primitive data types
+/* 
+ number
+ string 
+ boolean
+ Bigint
+ null 
+ undefined
+ Symbol
+ */
+
+// except object and array all data type are primitive data type
+
+var concatenate = 20 + 30 + "30";
+var concatenate2 = "20" + 30 + 30;
+
+console.log("concatenate=>", concatenate); //5030
+console.log("concatenate2=>", concatenate2);
+
+console.log("typeof=>", typeof concatenate); //
+console.log("typeof=>", typeof concatenat2); //
+
+// 5030
+// 80
+// 203030
+// 2060
+// None of these
+
+var t = 20 + +"30" + 40 + "40" + +"40";
+
+console.log("checker", t);
+
+// if there is any numeric string value  if you add plus operator before it , it will convert numeric string value into numbern like parseInt.
+
+console.log(typeof +"40"); // number
+
+console.log(typeof +"20");
+console.log(typeof parseInt("20"));
+
+var tt = +("20" + "30" + "40") + +"120" + "230";
+
+console.log("tt=>", tt);
+
+var tts = -("20" + "30" + "50") - ("30" - "30" + 60);
+
+console.log("tts=>>", tts);
+
+// minus operator
+
+var minus1 = 20 - 20; // 0
+
+var minus2 = 20 - "20";
+
+console.log(minus2);
