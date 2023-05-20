@@ -187,3 +187,8 @@ var minus1 = 20 - 20; // 0
 var minus2 = 20 - "20";
 
 console.log(minus2);
+
+// Note:4 Except plus operator all other mathmatical operator which used b/w two value
+//EX:  value1+value2
+// if value1 is numeric string and value2 is numeric string operator will convert numeric to the number and apply the its working
+// Any mathmaticl applied b/w two value will convert value into number if any of that number is numeric string
