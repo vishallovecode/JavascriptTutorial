@@ -75,9 +75,25 @@ obj1["city"] = "Kanpur";
 
 // print the object
 console.log(obj1);
+
 // if you want to access the value using key
 
 console.log(obj1.lastName); // 0(1)
 console.log(obj1["name"]); // 0(1)
 
 // basic of functions
+
+// obj1.1 = 12356; this will give you the array
+// obj1.'selected location' = 'bangalore'  //this will give you the array
+obj1["selected location"] = "bangalore";
+obj1[1] = "1234";
+
+console.log(obj1);
+
+// console.log(obj1.'selected location')
+
+console.log(obj1["selected location"]);
+
+// Basic loop in JS
+
+// for loop
