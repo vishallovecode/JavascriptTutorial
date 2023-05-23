@@ -232,7 +232,124 @@ console.log(' "2" < 3', "2" < 3);
 
 console.log("checker::");
 
+//isNaN('') // false
+
+//isNaN(' ') // false
+// '' == +' '
+
+// Note: if any one of the value is boolean, convert boolean to number
+// if any one of the value is string  it will try to convert into number
+//
+
+//
+
+//
 console.log(true == "Vishal");
-console.log(true == 1);
-console.log(false == 0);
-console.log(false == "");
+//1 == NaN; // => false
+console.log(true == "1"); //  1 == '1'
+console.log(false == 0); //  true
+
+console.log(" " == ""); // false
+console.log(" " == 0); // false
+console.log(false === 0); // 0==0
+
+console.log([] == ""); // 0 == 0 // true
+console.log({} == ""); // NaN == 0 // FALSE
+console.log([] == false); // 0 == 0 // true
+console.log({} == false); // NaN == 0
+
+let checker = 0;
+if (checker) {
+  console.log("checker");
+}
+
+let checker2 = [];
+if (checker2) {
+  console.log("checker2");
+}
+
+let checker3 = {};
+if (checker3) {
+  console.log("checker3");
+}
+
+let checker4 = NaN;
+if (checker4) {
+  console.log("checker4");
+}
+
+//
+
+if (typeof checker5) {
+  console.log("Hey checker5");
+}
+
+// false
+
+// true
+
+// true
+
+// true
+
+console.log("0" == false); //true 0== 0
+console.log("0" == true); // false 0==1
+if ("0") {
+  console.log("Hey zero"); //
+}
+console.log(null == 0); // false
+console.log(undefined == 0); // false
+
+console.log(null == undefined); // true
+
+console.log(null == null);
+
+var tt = +("20" + "30" + "40") + +"120" + "230"; // 203040+120+ '230' =>2031601230
+
+console.log("tt=>", tt); //2031601230
+
+var tts = -("20" + "30" + "50") - ("30" - "30" + 60);
+
+console.log("tts=>>", tts); //
+
+console.log(2 > 3); //
+console.log(2 < 3); //
+
+console.log(' "2" < 3', "2" < 3); //
+
+console.log("A" < "B"); //
+console.log("a" < "A"); //
+
+console.log(' "2" < 3', "2" < 3); //
+
+console.log(+"12vishal"); // NaN
+console.log(+"vishal123"); // NaN
+
+console.log(Number("12vishal")); // NaN
+console.log(Number("vishal123")); // NaN
+
+console.log(parseInt("12vishal")); // NaN
+console.log(parseInt("vishal123")); // NaN
+
+// null and undefined in the case of equal operator  does not happen type conversion it simply compare the given value directly
+
+console.log(NaN == NaN);
+console.log(NaN === NaN);
+
+console.log(-0 === +0);
+
+// null  undefined //
+
+console.log(NaN == NaN);
+console.log(NaN === NaN);
+
+console.log(-0 === +0);
+
+console.log(parseInt("12vishal"));
+console.log(parseInt("vishal123"));
+
+console.log(+"12vishal");
+console.log(+"vishal123");
+
+console.log(Number("12vishal"));
+console.log(Number("vishal123"));
