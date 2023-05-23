@@ -54,3 +54,30 @@ console.log(array1[7]);
 
 const a = [1, 2, 4];
 console.log("index greater than lenght of array", a[10000]);
+
+console.log("dekho me chal rha hun or run ho rha hun");
+
+// Object
+
+var obj1 = {};
+// variable obj1 is now the object data type
+// object is somehow equivalent to the hashmap
+// object will store the key and value pair
+// key should be unique
+// key can have string and number
+
+// how to add key and value in object
+
+obj1 = { name: "Vishal", rollNo: 12345 };
+
+obj1.lastName = "Sharma";
+obj1["city"] = "Kanpur";
+
+// print the object
+console.log(obj1);
+// if you want to access the value using key
+
+console.log(obj1.lastName); // 0(1)
+console.log(obj1["name"]); // 0(1)
+
+// basic of functions
