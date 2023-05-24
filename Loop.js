@@ -57,3 +57,28 @@ console.log(!b); // => false
 //   console.log("hey i am running");
 //   p = p + 1;
 // } while (p > 5);
+
+// for loop for array traversal
+
+var dataArray = [1, 2, 3, 45, 6, 78];
+
+for (var i = 0; i < dataArray.length; i++) {
+  // here we are printing the index and value
+  console.log("value=>", dataArray[i], "index=> ", i);
+}
+
+// I dont care about the value
+
+// for in
+
+const listOfAnimal = ["Dog", "Cat", "Parrot"];
+
+for (let index in listOfAnimal) {
+  console.log("Index", index);
+}
+
+// for of
+
+for (let value of listOfAnimal) {
+  console.log("value", value);
+}
