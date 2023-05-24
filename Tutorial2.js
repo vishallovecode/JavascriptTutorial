@@ -340,16 +340,16 @@ console.log(-0 === +0);
 
 // null  undefined //
 
-console.log(NaN == NaN);
-console.log(NaN === NaN);
+console.log(NaN == NaN); // false
+console.log(NaN === NaN); // false
+console.log(-0 === +0); // true
+console.log(parseInt("12vishal")); //12
+console.log(parseInt("1v234ishal")); //1
+console.log(parseInt("v234ishal")); //NaN
+console.log(parseInt("vishal123")); //NaN
 
-console.log(-0 === +0);
+console.log(+"12vishal"); // NaN
+console.log(+"vishal123"); //// NaN
 
-console.log(parseInt("12vishal"));
-console.log(parseInt("vishal123"));
-
-console.log(+"12vishal");
-console.log(+"vishal123");
-
-console.log(Number("12vishal"));
-console.log(Number("vishal123"));
+console.log(Number("12vishal")); // NaN
+console.log(Number("vishal123")); // NaN
