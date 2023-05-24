@@ -72,13 +72,34 @@ for (var i = 0; i < dataArray.length; i++) {
 // for in
 
 const listOfAnimal = ["Dog", "Cat", "Parrot"];
-
+// 0,1,2
 for (let index in listOfAnimal) {
-  console.log("Index", index);
+  console.log("Index=>", index); // 0 ,1,2
 }
 
 // for of
 
 for (let value of listOfAnimal) {
-  console.log("value", value);
+  console.log("value=>", value); // Dog , Cat , Parrot
 }
+
+var employe = { name: "Vishal", lastName: "Sharma", mobile: 9915378881 };
+// key  => name , lastName , mobile
+for (let key in employe) {
+  console.log("dilip dilip dilip  =>", key);
+}
+
+// for of in object (you cannot use) this is not supported by the object
+// employee iterable
+
+// for (let value of employe) {
+//   console.log("object value=>", value);
+// }
+
+// for in  => it will give the key of the iterable item
+
+// for of will give you the value of the iterable item (this will not work in the object)
+
+var c = [1, 2, 3, 4, 5, 6]; // =>  // 1 2,3,4,5,6,
+c[0]; // here zero is the key which is use for getting value of specific element
+employe.name; // Vishal
