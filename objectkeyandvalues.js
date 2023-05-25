@@ -71,7 +71,6 @@ for (var i = 0; i < students.length; i++) {
   //i=3 // students[3] => { name: "Rom", rank: "4" }
   //i=4 //students[4] => { name: "Tin", rank: "3" }
   greetingMessage(students[i].name, students[i].rank);
-
   greetingMessage1(students[i]);
 }
 
