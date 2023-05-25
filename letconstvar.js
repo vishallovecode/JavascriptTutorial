@@ -16,4 +16,16 @@ console.log(b);
 
 // const b =50; redclare not allowed
 const c = b;
-c = a;
+
+// let
+
+let p = 20;
+p = 30; // re-initialize the let variable
+let t; // you can onlye declare the let variable
+// let p = 40; // you cannot re-declare the var variable
+
+// var
+
+var w = 20;
+var w;
+var w = 40;
