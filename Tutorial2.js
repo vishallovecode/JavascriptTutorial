@@ -353,3 +353,17 @@ console.log(+"vishal123"); //// NaN
 
 console.log(Number("12vishal")); // NaN
 console.log(Number("vishal123")); // NaN
+
+// for(let i=0 , j=0 ; i<0  ; j<0;i++ , j++) {
+
+// }
+
+// let i =0;
+// let j =10
+// while(i<j) {
+//   if() {
+//     i--;
+//   } else {
+//     j--;
+//   }
+// }
