@@ -21,8 +21,8 @@ const c = b;
 
 let p = 20;
 p = 30; // re-initialize the let variable
-let t; // you can onlye declare the let variable
-// let p = 40; // you cannot re-declare the var variable
+let t; // you can only declare the let variable
+// let p = 40; // you cannot re-declare the let variable
 
 // var
 
