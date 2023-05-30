@@ -88,11 +88,11 @@ ncall();
 // default parameter
 // diff b/w arguments and parameter
 
-// Immediately invoked functions
+// Immediately invoked functions expression
 
 // => the functions which call or invoked at the time of declaration or definition
 // => this functions can we call only once not more than once
-// => We can call this functions in shorthand way which is IIF
+// => We can call this functions in shorthand way which is IIFE
 
 // Syntax using normal functions
 
@@ -140,3 +140,21 @@ function normalFunction() {}
 // var callMe = ()=>{
 
 // }
+
+// Edge Case: 3
+
+// const function1 = () => {
+//   console.log("function1");
+// };
+
+// function function2() {
+//   console.log("function2");
+// }
+
+// (
+//   function1
+// )() // this will give you error
+
+// (
+//   function2
+// )() // this will give you error
