@@ -62,5 +62,65 @@ normalFunction("hey we are learning arrow function");
 
 //  normal function vs arrow function
 // arguments
-// this
+// this => Pending
 // syntax
+
+const call = () => {
+  // in this case arguments are not defined and  it will through the reference error
+  // typeof function return undefined for the not defined variable
+  console.log(typeof arguments); //
+};
+const ncall = function () {
+  // here we will able to access the arguments variable ,  that will be array of arguments
+  // typeof array return the object
+  console.log(typeof arguments); //
+};
+
+call();
+ncall();
+
+// CallBack functions
+// first class function
+// Immediately invoked functions
+// Function statement and expression
+// Higher order functions
+// Anonymous function
+// default parameter
+// diff b/w arguments and parameter
+
+// Immediately invoked functions
+
+// => the functions which call or invoked at the time of declaration or definition
+// => this functions can we call only once not more than once
+// => We can call this functions in shorthand way which is IIF
+
+// Syntax using normal functions
+
+(function callOnce() {
+  console.log("Hey calling only one time");
+})();
+
+// callOnce(); // Error:: referece error not  defined
+// What is difference b/w not defined and undefined
+
+// Syntax using arrow functions
+
+(() => {
+  console.log("Hey calling only one time using arrow function");
+})();
+
+// Some edge cases
+
+// Edge Case: 1
+const data = (function callOnce() {
+  console.log("Hey calling only one time second time defining");
+  return 123;
+})();
+
+console.log(data); // 123
+
+// Edge Case: 2
+const data2 = (function callOnce() {
+  console.log("Hey calling only one time second time defining");
+})();
+console.log(data2); // undefined
