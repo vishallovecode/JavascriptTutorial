@@ -105,6 +105,8 @@ ncall();
 
 // Syntax using arrow functions
 
+// defining IIFE with arrow function arrow functions should be anonymous function
+
 (() => {
   console.log("Hey calling only one time using arrow function");
 })();
@@ -124,3 +126,17 @@ const data2 = (function callOnce() {
   console.log("Hey calling only one time second time defining");
 })();
 console.log(data2); // undefined
+
+// before es6 => 2015
+// we only able to use normal function
+// normal function always start with the function keyword
+
+// syntax
+function normalFunction() {}
+
+// after es6 => 2015
+// arrow function
+
+// var callMe = ()=>{
+
+// }
