@@ -185,6 +185,25 @@ fancy(20, "Looks good"); // here 20 and looks good are arguments
 function senMesssage(message = "Hey chill i amher") {
   console.log(message);
 }
-
 senMesssage(); // what us message undefined
 senMesssage("Helo are you fine");
+
+// prmomises
+// callback
+// generator
+
+// Anonymous function  =>  the function without name is called anonymous function
+
+// IIFE WITH NORMAL ANONYMOUS FUNCTION
+
+(function () {
+  console.log("Hey hi");
+})();
+
+// ()=> {
+
+// }
+
+// function () {
+
+// }
