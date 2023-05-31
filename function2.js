@@ -109,3 +109,34 @@ const add = (A, B, C) => {
   return A + B + C;
 };
 add(1, 2, 34);
+
+// arrow functions is same as first class function , callback function is alos first class function
+
+// diffe b/w function statment vs function stament
+
+// Hoisting => Pending
+
+// function statement or function declaration
+
+function callMe2() {
+  //logic
+}
+
+// Function Expression
+var callMe3 = function () {};
+
+// Function Expression
+var callMe4 = () => {};
+
+// give me the example of function statement
+
+function functionDec() {
+  // function logic
+}
+
+// give me the example of function expression
+
+// assigning the fuction into variable is function expression you can assign normal function and arrow function as well
+
+var callMe43 = () => {};
+var callMe33 = function () {};
