@@ -112,7 +112,7 @@ add(1, 2, 34);
 
 // arrow functions is same as first class function , callback function is alos first class function
 
-// diffe b/w function statment vs function stament
+// diffe b/w function statment vs function expression
 
 // Hoisting => Pending
 
@@ -140,3 +140,35 @@ function functionDec() {
 
 var callMe43 = () => {};
 var callMe33 = function () {};
+
+// Rest operator  (...) => this will convert variable into the array  => function paramater
+//Spread operator (...)
+// both rest and spread operator use ...
+
+// rest operator is converting  rest of the arguments of function into the array
+// Rest operator should be last of the parameter
+
+function DILIP(a, b, c, ...d) {
+  for (let i = 0; i < d.length; i++) {
+    console.log(i, d[i]);
+  }
+  d.push("last me add kia");
+  console.log(d);
+}
+
+DILIP(1, 2, 3, 4, "vishal", "sharma", "hello");
+
+// spread operator
+// convert array of element into the normal value
+
+const array = [1, 3, 4, 5];
+
+console.log(...array); // spread means
+console.log(array);
+
+function Chimpangee(a, b, c, d) {
+  console.log("spread", a, b, c, d);
+  console.log(a * b * c * d * e); // NaN
+}
+
+Chimpangee(...array); // Chimpangee(1,3,4,5)
