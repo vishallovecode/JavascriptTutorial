@@ -172,3 +172,12 @@ function Chimpangee(a, b, c, d) {
 }
 
 Chimpangee(...array); // Chimpangee(1,3,4,5)
+
+// Java ??
+
+// Javascript ??
+
+// Function ??
+
+// let var const
+// int , string ,
