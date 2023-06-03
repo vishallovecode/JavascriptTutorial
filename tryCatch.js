@@ -53,17 +53,37 @@ const array = [1, 2, 3, 4];
 console.log(Object.keys(array));
 
 try {
-  array.trim();
+  // 1....100
+  array.trim(); // 101
+  throw new error("error"); //
+  //101 ke bad
 } catch (error) {
   console.log(
     "I can handle the error here if occureed  , I can show ui later when we study the dom or react or i can proper meessage"
   );
-  console.log(error);
+  console.error(error);
+  console.error(error.message);
 }
-
+console.log("hey");
+console.log("hey");
+console.log("hey");
 console.log("hey");
 
 // try {
 // } catch (error) {}
 
 // array is object only
+
+function divide(num1, num2) {
+  try {
+    if (num2 === 0) {
+      throw "Cannot divide by zero!";
+    } else {
+      return num1 / num2;
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+console.log(divide(6, 0));
