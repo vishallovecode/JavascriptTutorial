@@ -87,3 +87,11 @@ function divide(num1, num2) {
 }
 
 console.log(divide(6, 0));
+
+// error type in javascript
+
+// Syntax Error
+// Logic Error
+// Runtime Error
+
+// Reference Error  => You are trying to access the variable which is not defined
