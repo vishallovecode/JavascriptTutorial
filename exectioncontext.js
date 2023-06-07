@@ -2,7 +2,7 @@
 // Synchrnous
 // AsynChrnous
 // Multi Threaded
-// Exection Context
+// Execution Context
 // Type Of execution context
 
 // mallinath
@@ -23,7 +23,9 @@ console.log(a);
 // let b = 30;
 // console.log(b);
 
-// console.log(c);
+console.log(c); // temporal dead zone
 
 let c = 30;
 console.log(c);
+
+// Temporal Dead Zone  => the period of time during which the let and const declarations cannot be accessed
