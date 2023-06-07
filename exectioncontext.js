@@ -81,8 +81,9 @@ function check() {
 }
 
 // variable
-// function statement
-console.log(arrowFunction); // undefined
+// function expression
+console.log(arrowFunction); // undefined => undefined()
+console.log(arrowFunction()); // this will give you the error undefined is not a function
 var arrowFunction = () => {};
 
 console.log(arrowFunction1); // error referece
@@ -92,3 +93,8 @@ console.log(arrowFunction2); // error referece
 let arrowFunction3 = () => {};
 
 // function expression and function declaration
+
+// function  with function statement or declaration can be call before declaration but function declare with expression cannot be called before declaration
+
+// in arrow function function variable  at the time of compilation or
+// memory allocation or hositing it will get the value as undefined initally and variable behave like let const and var how they behave in hositing
