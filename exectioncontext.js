@@ -44,7 +44,7 @@ function call(a, b, c) {
   return result;
 }
 
-// console.log(result);
-let result = call(10, 20, 30);
+console.log(result); // undefined
+var result = call(10, 20, 30);
 
-console.log(result);
+console.log(result); // 60
