@@ -83,14 +83,14 @@ function check() {
 // variable
 // function expression
 console.log(arrowFunction); // undefined => undefined()
-console.log(arrowFunction()); // this will give you the error undefined is not a function
+// console.log(arrowFunction()); // this will give you the error undefined is not a function
 var arrowFunction = () => {};
 
-console.log(arrowFunction1); // error referece
+// console.log(arrowFunction1); // error referece
 let arrowFunction1 = () => {};
 
-console.log(arrowFunction2); // error referece
-let arrowFunction3 = () => {};
+// console.log(arrowFunction2); // error referece
+const arrowFunction3 = () => {};
 
 // function expression and function declaration
 
@@ -98,3 +98,5 @@ let arrowFunction3 = () => {};
 
 // in arrow function function variable  at the time of compilation or
 // memory allocation or hositing it will get the value as undefined initally and variable behave like let const and var how they behave in hositing
+
+// call stack is the stack where the  execution context put inside it one by one  , first global execution context , and after that function exection context is pushed if nested exection context that is alos push
