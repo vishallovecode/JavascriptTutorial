@@ -30,21 +30,65 @@
 
 // // Temporal Dead Zone  => the period of time during which the let and const declarations cannot be accessed
 
-console.log(a);
-var a = 30;
+// console.log(a);
+// var a = 30;
 
-// console.log(c);
-const c = 30;
+// // console.log(c);
+// const c = 30;
 
-function call(a, b, c) {
-  var result = a + b + c;
+// function call(a, b, c) {
+//   var result = a + b + c;
 
-  console.log("helo0");
+//   console.log("helo0");
 
-  return result;
+//   return result;
+// }
+
+// console.log(result); // undefined
+// var result = call(10, 20, 30);
+
+// console.log(result); // 60
+
+// callstack
+
+var a = 20;
+var b = 40;
+
+call1();
+
+function call1() {
+  console.log(a);
 }
 
-console.log(result); // undefined
-var result = call(10, 20, 30);
+call2();
 
-console.log(result); // 60
+console.log(call2);
+
+function call2() {
+  var a = 30;
+  console.log(a);
+}
+
+function getSum() {
+  return a + b;
+}
+
+// function declaration
+
+function check() {
+  const a = getSum();
+  console.log(a);
+}
+
+// variable
+// function statement
+console.log(arrowFunction); // undefined
+var arrowFunction = () => {};
+
+console.log(arrowFunction1); // error referece
+let arrowFunction1 = () => {};
+
+console.log(arrowFunction2); // error referece
+let arrowFunction3 = () => {};
+
+// function expression and function declaration
