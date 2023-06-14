@@ -120,3 +120,28 @@ console.log("indexof", data1234.indexOf([1, 2, 34]));
 // includes alsoe take value if value exist inside the array it will return true else it will return  false
 console.log("includes", data1234.includes("hello"));
 console.log("includes", data1234.includes("hell1"));
+
+// Length
+// this will give you the lenght of arrtay
+
+// concat
+
+const aa = [1, 2, 34];
+const bb = [3, 4, 5];
+
+const cc = aa.concat(bb);
+console.log(cc);
+
+// reverse
+console.log(aa.reverse());
+
+// toString
+
+console.log(aa.toString()); //  '34,2,1' join(',')
+
+const data123 = [1, 1, 1, 1, 12, 2, 2, 2, 2, 4, 5, 5, 5];
+console.log(data123.lastIndexOf(1)); //  3
+console.log(data123.indexOf(1)); // 0
+
+console.log(data123.lastIndexOf(12)); //  4
+console.log(data123.indexOf(12)); // 4
