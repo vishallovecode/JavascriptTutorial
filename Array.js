@@ -86,3 +86,37 @@ const ss = data.join("-");
 console.log(ss);
 
 console.log(typeof data.join("/")); // string
+
+// how to push the element in array
+
+const data2 = [1, 2, 3, 4, 5, 6];
+// in array if you did not given any value to given index js automatically set that index value to undefined
+// data2[10] = 10;
+// console.log(data2);
+
+//push
+const pushlen = data2.push("hello");
+console.log(data2);
+console.log(pushlen);
+
+// pop
+const popvalue = data2.pop();
+data2.pop();
+data2.pop();
+data2.pop();
+console.log(popvalue);
+console.log(data2);
+
+// indexOf
+
+const data1234 = [1, 2, 3, 4, 5, 5, 67, [1, 2, 34], "hello"];
+
+// indexof function take value as parameter and it will return the index of that value if that value present inside tha rray else it will return -1
+// if there us multilpe value exist than it will print first ocuurenece
+console.log("indexOf", data1234.indexOf(5, 5));
+console.log("indexOf", data1234.indexOf(55));
+
+console.log("indexof", data1234.indexOf([1, 2, 34]));
+// includes alsoe take value if value exist inside the array it will return true else it will return  false
+console.log("includes", data1234.includes("hello"));
+console.log("includes", data1234.includes("hell1"));
