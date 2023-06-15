@@ -178,8 +178,11 @@ console.log(array3);
 //  higher order functions
 
 // declarative approach
-// forEach => it higher order function provided by array in js
+// forEach => it higher order function provided by array in js , it is used to iterate the array in js , you can this is the iterative method ,
+//it will take to parameter callback function and this  , this is optional here  ,
+// callbaack function accept three parameter , value   , index , and array itself
 
+// forEach function always return the undefined
 const random = [1, 2, 3, "hey", "chill", 5, "relax"];
 
 const call1 = (value, index, array) => {
@@ -187,7 +190,41 @@ const call1 = (value, index, array) => {
 };
 
 // random.forEach(call1);
-
-random.forEach((value, index, array) => {
+const chimchom = (value, index, array) => {
+  console.log("value=>", value, "index=>", index);
+};
+// const forReturn = random.forEach(chimchom);
+const forReturn = random.forEach((value, index, array) => {
   console.log("value=>", value, "index=>", index);
 });
+
+console.log(forReturn); // undefined
+
+//  Map  higher  order Functions
+
+// Higher order iterative method
+// it mostly use for modification of given array , this will return the modfied array with same length
+// map function is only use for the array varable if you use this for another variable it will throw the error
+// map function also except the callback
+// callback of map function also have three value  => (value , index , array)
+
+// for map callback function is mandatory
+// firsr parameter shoudl be function
+const employee = [40000, 300000, 400000, 23000, 450000, 45000, 600000, 80000];
+
+const modifyEmployeeArray = (value, index, array) => {
+  if (index == 4) {
+    return;
+  }
+  const obj = {
+    salary: value,
+  };
+  return obj;
+};
+const randomwArray = employee.map(modifyEmployeeArray);
+console.log(randomwArray);
+
+// Uncaught TypeError: undefined is not a function
+//     at Array.map (<anonymous>)
+//     at Array.js:211:29
+// (anonymous) @ Array.js:211
