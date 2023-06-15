@@ -228,3 +228,28 @@ console.log(randomwArray);
 //     at Array.map (<anonymous>)
 //     at Array.js:211:29
 // (anonymous) @ Array.js:211
+
+const numbers = [3, 4, 5, 6, 8, 9, 10, 15, 16];
+// result
+const result = [
+  { isEven: false },
+  { isEven: true },
+  { isEven: false },
+  { isEven: true },
+  { isEven: true },
+  { isEven: false },
+  { isEven: true },
+  { isEven: true },
+  { isEven: false },
+];
+// opposite of shift is pop
+// shift and unshift in javascript array
+// it will use to remove the element of array from starting
+
+const value = numbers.shift();
+console.log(value, numbers);
+
+// push is use for adding the element at the end
+// unshift is use for adding the element at the initial and return the lenght if modified array
+const updatedLen = numbers.unshift("unshift"); //
+console.log("updatedArray", updatedLen);
