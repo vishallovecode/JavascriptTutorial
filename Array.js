@@ -145,3 +145,49 @@ console.log(data123.indexOf(1)); // 0
 
 console.log(data123.lastIndexOf(12)); //  4
 console.log(data123.indexOf(12)); // 4
+
+// function expression
+
+// var myNormalFunction = function () {
+//   return "Hey I am happy!! 🥰";
+// };
+
+// var myNormalFunction = () => "Hey I am happy!! 🥰";
+
+// const myNormalFunction = () => {
+//   const data = "Hey I am happy!! 🥰 😄";
+//   return data;
+// };
+
+console.log("15 june 2023");
+
+const array2 = [1, 2, 3, "hey", "chill", 5, "relax"];
+// new array =>  [1,2,3,{key: 'hey'} , {key: 'chill'} , 5 , {key: 'relax'}]
+
+const array3 = [];
+
+for (let i = 0; i < array2.length; i++) {
+  if (typeof array2[i] === "string") {
+    array3[i] = { name: array2[i] };
+  } else {
+    array3[i] = array2[i];
+  }
+}
+console.log(array3);
+
+//  higher order functions
+
+// declarative approach
+// forEach => it higher order function provided by array in js
+
+const random = [1, 2, 3, "hey", "chill", 5, "relax"];
+
+const call1 = (value, index, array) => {
+  console.log("value=>", value, "index=>", index);
+};
+
+// random.forEach(call1);
+
+random.forEach((value, index, array) => {
+  console.log("value=>", value, "index=>", index);
+});
