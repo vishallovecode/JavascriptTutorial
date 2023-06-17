@@ -309,3 +309,33 @@ number1.map(func);
 // as name suggest filter use to filter out the data from array and give the new array with filtered data//
 // filter hof always return the array/
 // if condition match its return that element else its return empty array
+
+var number1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// i want only even number ??
+
+const func2 = (v, index, array) => {
+  return v % 2 === 0;
+  // true or false
+};
+
+const filteredData = number1.filter(func2);
+console.log("filter", filteredData);
+
+function myFilter(f, arr) {
+  const result = [];
+  // array and object primitive datatyye  they are reference type
+  for (let i = 0; i < arr.length; i++) {
+    const isTruthy = f(arr[i], i, array);
+    if (isTruthy) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+const filter1 = myFilter(func2, number1);
+console.log("mtfilter", filter1);
+const ddd = [];
+
+ddd = [1, 2, 4];
