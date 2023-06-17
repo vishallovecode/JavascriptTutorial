@@ -302,4 +302,10 @@ number1.map(func);
 
 // how filter work
 
-// filter will be only applied on the
+//filter is declrative way to iterate throught the array
+// filter function is provided by javascript
+// filter function is higher order function of javascript array
+// filter function takes first argument as func , if first argument is not function code will not work
+// as name suggest filter use to filter out the data from array and give the new array with filtered data//
+// filter hof always return the array/
+// if condition match its return that element else its return empty array
