@@ -242,6 +242,21 @@ const result = [
   { isEven: true },
   { isEven: false },
 ];
+
+const callbackFunc12 = (value, index, array) => {
+  return {
+    isEven: value % 2 == 0 ? true : false,
+  };
+};
+
+// const modifiedNumber = numbers.map((value, index, array) => {
+//   return {
+//     isEven: value % 2 == 0 ? true : false,
+//   };
+// });
+const modifiedNumber = numbers.map(callbackFunc12);
+console.log(modifiedNumber);
+
 // opposite of shift is pop
 // shift and unshift in javascript array
 // it will use to remove the element of array from starting
@@ -253,3 +268,38 @@ console.log(value, numbers);
 // unshift is use for adding the element at the initial and return the lenght if modified array
 const updatedLen = numbers.unshift("unshift"); //
 console.log("updatedArray", updatedLen);
+
+var number1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+//=> [false , true , false , true , false , true , false , true , false , true]
+
+function mymap(callbackfunc, array) {
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    result[i] = callbackfunc(array[i], i, array);
+  }
+  return result;
+}
+
+const func = (v, index, array) => {
+  return v % 2 === 0;
+};
+
+const mapExample2 = mymap(func, number1);
+
+const mapExample = number1.map(func);
+
+console.log("mapExample", mapExample);
+console.log("mapExample2", mapExample2);
+
+// higher order function
+
+var number1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+number1.map(func);
+
+// const mapExample2 = mymap(func, number1);
+
+// how filter work
+
+// filter will be only applied on the
