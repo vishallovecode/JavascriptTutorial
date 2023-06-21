@@ -478,3 +478,61 @@ const employeedFinder = (value, index) => {
 
 const selectedEmloyeee = companyEmployee.find(employeedFinder);
 console.log(selectedEmloyeee);
+
+//
+const stundetAssi = [
+  { name: "Vishal", assin: 60 },
+  { name: "tiro", assin: 70 },
+  { name: "verr", assin: 80 },
+  { name: "tom", assin: 90 },
+  { name: "rim", assin: 70 },
+  { name: "chim", assin: 70 },
+];
+
+// if all the student have assigment % greater  or equal that 60 eligible for gift
+const isEligigbleForGift = stundetAssi.every((value) => {
+  return value.assin >= 60;
+});
+
+console.log(isEligigbleForGift, "isEligigbleForGift");
+
+const stundetAssi1 = [
+  { name: "Vishal", assin: 60 },
+  { name: "tiro", assin: 70 },
+  { name: "verr", assin: 80 },
+  { name: "tom", assin: 90 },
+  { name: "rim", assin: 70 },
+  { name: "chim", assin: 10 },
+];
+
+const checker = (value) => {
+  return value.assin >= 60;
+};
+
+// const isEligigbleForGift1 = stundetAssi1.every(checker);
+
+const isEligigbleForGift1 = stundetAssi1.every((value) => {
+  return value.assin >= 60;
+});
+
+console.log(isEligigbleForGift1, "isEligigbleForGift1");
+
+// 60>=  // true => gift
+// 60< // false
+
+const stundetAssi2 = [
+  { name: "Vishal", assin: 60 },
+  { name: "tiro", assin: 70 },
+  { name: "verr", assin: 95 },
+  { name: "tom", assin: 90 },
+  { name: "rim", assin: 70 },
+  { name: "chim", assin: 10 },
+];
+
+const isEligigbleForGift2 = stundetAssi2.some((value) => {
+  return value.assin >= 90;
+});
+
+console.log(isEligigbleForGift2, "isEligigbleForGift2");
+
+// if anyone of the student have assigment % greater that 90 eligible for gift
