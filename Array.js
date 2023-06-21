@@ -389,11 +389,53 @@ Array.isArray(student6) &&
 //   });
 // }
 
-Array.isArray(student7) &&
-  student7.forEach((data) => {
-    console.log("student7", data);
-  });
+// Array.isArray(student7) &&
+//   student7.forEach((data) => {
+//     console.log("student7", data);
+//   });
 
-const student8 = {};
+// const student8 = {};
 
-student8.forEach(() => {});
+// student8.forEach(() => {});
+
+// REDUCE
+
+const companyEmployee = [
+  { name: "Vishal", salary: 20000 },
+  { name: "tiro", salary: 100000 },
+  { name: "verr", salary: 30000 },
+  { name: "tom", salary: 200000 },
+  { name: "rim", salary: 10000 },
+  { name: "chim", salary: 30000 },
+];
+
+companyEmployee[0]; //  { name: "Vishal", salary: 20000 },
+companyEmployee[0].name; // 'Vishal'
+
+let totalSum = 0;
+const sum = (employee, index, array) => {
+  console.log(employee);
+  totalSum = totalSum + employee.salary;
+};
+
+companyEmployee.forEach(sum);
+
+console.log(totalSum);
+
+let employeeSum = 0;
+for (let i = 0; i < companyEmployee.length; i++) {
+  employeeSum = employeeSum + companyEmployee[i].salary;
+}
+console.log(employeeSum);
+
+const reduceCallback = (acc, value) => {
+  return acc + value.salary;
+};
+
+let totalSalary = companyEmployee.reduce(reduceCallback, 0);
+
+// let totalSalary = companyEmployee.reduce((acc, value) => {
+//   return acc + value.salary;
+// }, 0);
+
+console.log(totalSalary, "totalSalary");
