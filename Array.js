@@ -429,6 +429,7 @@ for (let i = 0; i < companyEmployee.length; i++) {
 console.log(employeeSum);
 
 const reduceCallback = (acc, value) => {
+  console.log(value); //
   return acc + value.salary;
 };
 
@@ -439,3 +440,41 @@ let totalSalary = companyEmployee.reduce(reduceCallback, 0);
 // }, 0);
 
 console.log(totalSalary, "totalSalary");
+
+// home work is writing my reduce which should behave like reduce
+
+// edge cases
+
+// my reduce
+//
+
+// const myReduce = (callback, array, initial) => {
+//   const acc = typeof initial == "undefined" ? array[0] : initial;
+//   for (let i = 0; i < array.length; i++) {
+//     acc = callback(acc, array[i], index);
+//   }
+//   return acc;
+// };
+
+const ddddata = [1, 2, 3, 4];
+
+const sumCllaback = (acc, value, index, array) => {
+  return acc + value;
+};
+
+const ttSum = ddddata.reduce(sumCllaback);
+
+console.log(ttSum);
+
+// find ?? i want to find
+
+const employeedFinder = (value, index) => {
+  return value.salary === 20000;
+};
+
+// const selectedEmloyeee = companyEmployee.find((value, index) => {
+//   return value.salary === 20000;
+// });
+
+const selectedEmloyeee = companyEmployee.find(employeedFinder);
+console.log(selectedEmloyeee);
