@@ -338,4 +338,62 @@ const filter1 = myFilter(func2, number1);
 console.log("mtfilter", filter1);
 const ddd = [];
 
-ddd = [1, 2, 4];
+// ddd = [1, 2, 4];
+
+// how to know giveb variable is array or not
+
+// map , filter , reduce , find
+
+// if you want to check that given variable is falsy or not
+
+// // null , undefine , 0  , ''
+// student &&
+//   Array.isArray(student) &&
+//   student.forEach((data) => {
+//     console.log("data", data);
+//   });
+// console.log("hey");
+
+const student = undefined;
+const student2 = null;
+const student3 = "";
+const student4 = 0;
+const student5 = false;
+const student6 = "vishal";
+
+// if (student) {
+//   console.log(student);
+// }
+
+student && console.log("student2", student);
+student2 && console.log("student2", student2);
+student3 && console.log("student3", student3);
+student4 && console.log("student4", student4);
+student5 && console.log("student5", student5);
+student6 && console.log("student6", student6);
+
+student &&
+  student.forEach(() => {
+    console.log("IT WILL NOT RUN");
+  });
+
+const student7 = [1, 2];
+Array.isArray(student6) &&
+  student6.forEach(() => {
+    console.log("HEY");
+  });
+
+// if(Array.isArray(student7)) {
+//   student7.forEach((data) => {
+//     console.log("student7", data);
+//   });
+// }
+
+Array.isArray(student7) &&
+  student7.forEach((data) => {
+    console.log("student7", data);
+  });
+
+const student8 = {};
+
+student8.forEach(() => {});
