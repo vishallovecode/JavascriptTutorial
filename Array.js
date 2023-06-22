@@ -548,6 +548,7 @@
 // Slice(startIndex , endIndex)
 
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// your original is not modifying
 
 const slice1 = nums.slice();
 
@@ -568,3 +569,44 @@ console.log("slice4", slice4); //
 const slice5 = nums.slice(-8, -2); // [3,4,5,6,7,8]
 
 console.log("slice5", slice5); //
+
+console.log(nums);
+
+// splice
+
+// // your original array will  modify
+
+const rank = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+//
+
+const element = rank.splice(0, 2);
+
+//  it will return the effected or deleted element
+
+console.log(element, "element");
+console.log(rank); // [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+const element3 = rank.splice(0, 0);
+console.log(element3);
+
+const element4 = rank.splice(3, 5);
+console.log("element4", element4); //[6, 7, 8, 9, 10]
+console.log(rank); //[3, 4, 5, 11, 12, 13, 14, 15]
+
+// joining the element in array
+
+const animalsCount = [4, 5, 6, 7, 8, 11, 2, 3, 5];
+
+const updatedList = animalsCount.splice(
+  1,
+  0,
+  "hello",
+  "hey",
+  "tit",
+  "tot",
+  "lol"
+);
+
+console.log(updatedList); // [8, 11]
+console.log(animalsCount); // [4, 5, 6, 7, 'hello', 'hey', 'tit', 'tot', 'lol', 2, 3, 5]
