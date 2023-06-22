@@ -605,8 +605,39 @@ const updatedList = animalsCount.splice(
   "hey",
   "tit",
   "tot",
-  "lol"
+  "lol",
+  [1, 2, 3, 4],
+  { name: "name" }
 );
 
 console.log(updatedList); // [8, 11]
 console.log(animalsCount); // [4, 5, 6, 7, 'hello', 'hey', 'tit', 'tot', 'lol', 2, 3, 5]
+
+// sorting the array
+
+const mystudents = ["Vishal", "Tim", "ABC", "Zida"];
+
+// Arrays.sort
+
+mystudents.sort();
+
+console.log("mystudents", mystudents);
+
+const assigmentMarks = [90, 30, 60, 10, 600, 10000];
+
+assigmentMarks.sort();
+
+console.log(assigmentMarks, "assigmentMarks");
+
+// sort that accept one more parameter which is called compar function
+
+// const compareFunc = (a, b) => a - b;
+const compareFunc = (a, b) => b - a;
+
+// if compare function greater than 0  b will be push  before a
+// if compare function less than 0  a will be push  before b
+//// if compare function is equal to  0  means both value will be push one by one
+
+assigmentMarks.sort(compareFunc);
+
+console.log(assigmentMarks, "assigmentMarks123");
