@@ -641,3 +641,44 @@ const compareFunc = (a, b) => b - a;
 assigmentMarks.sort(compareFunc);
 
 console.log(assigmentMarks, "assigmentMarks123");
+
+// Example 1
+
+// sorting array of object
+
+const myEmployee = [
+  { name: "Vishal", salary: 20000 },
+  { name: "tiro", salary: 100000 },
+  { name: "verr", salary: 30000 },
+  { name: "tom", salary: 200000 },
+  { name: "rim", salary: 10000 },
+  { name: "chim", salary: 30000 },
+];
+
+myEmployee.sort((a, b) => a.salary - b.salary);
+console.log(myEmployee);
+
+//
+const employeeName = "V-i-s-h-a-l";
+
+const dataee = employeeName.replace("-", "++");
+const dataee1 = employeeName.replaceAll("-", "++");
+
+console.log(dataee);
+console.log(dataee1);
+
+// split => convert string into the array
+
+const studentName = "RavanRaj";
+
+console.log(studentName.toLowerCase());
+console.log(studentName.toUpperCase());
+console.log(studentName.substring(0, 3));
+console.log(studentName.indexOf("R"));
+console.log(studentName.length);
+console.log(studentName.includes("Raj"));
+console.log(studentName.includes("Raj"));
+studentName.charAt(0); /
+
+
+

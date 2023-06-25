@@ -1,9 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <style>
+        * {
+            display: flex;
+            justify-content: right;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+        }
+
+        nav {
+            position: absolute;
+            /* top: 20%; */
+            left: 15%;
+            transform: translate(-50%, 50%);
+            background-color: #1b1b1b;
+            width: 400px;
+            line-height: 40px;
+            padding: 8px 25px;
+        }
+
+        nav label {
+            color: white;
+            font-size: 22px;
+            font-weight: 500;
+            display: block;
+            cursor: pointer;
+        }
+
+        .button span {
+            float: right;
+            line-height: 35px;
+        }
+
+        /* span {
+        float: right;
+        line-height: 35px;
+        color: red;
+      } */
+
+        nav ul {
+            position: absolute;
+            background-color: #130a0a;
+            list-style: none;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            border-radius: 5px;
+            display: none;
+        }
+
+        [id^="btn"]:checked+ul {
+            display: block;
+        }
+
+        nav ul li {
+            line-height: 40px;
+            padding: 8px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul li label {
+            font-size: 18px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+        }
+
+        nav ul ul {
+            position: static;
+        }
+
+        nav ul ul li {
+            line-height: 30px;
+            padding-left: 30px;
+            border-bottom: none;
+        }
+
+        nav ul li span {
+            font-size: 20px;
+            float: right;
+        }
+
+        nav ul ul li a {
+            color: #e6e6e6;
+            font-size: 17px;
+        }
+
+        nav ul li a:hover,
+        nav ul li label:hover {
+            color: rgb(15, 236, 236);
+        }
+
+        nav .menu::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            background-color: #062020;
+            right: 20px;
+            top: -10px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        nav ul li span {
+            font-size: 20px;
+            float: right;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+
+        input {
+            display: none;
+        }
+    </style>
+</head>
 
 <body>
-    <h2>Array </h2>
-    <script src='Array.js'></script>
+    <nav>
+        <label for="btn" class="button">Transaction
+            <span class="fa-solid fa-caret-down"></span>
+        </label>
+        <input type="checkbox" id="btn" />
+
+        <ul class="menu">
+            <li>
+                <label for="btn-2" class="first">Sales
+                    <span class="fa-solid fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="btn-2" />
+                <ul>
+                    <li><a href=""> Sales Quotation</a></li>
+                    <li><a href="">Sales Invoice</a></li>
+                    <li><a href=""> Payment In </a></li>
+                    <li><a href="">Sales Return</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-3" class="second">Purches
+                    <span class="fa-solid fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="btn-3" />
+                <ul>
+                    <li><a href=""> Purches Order</a></li>
+                    <li><a href="">Purches Invoice</a></li>
+                    <li><a href=""> Payment Out </a></li>
+                    <li><a href="">Purches Return</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-4" class="third">Expenses
+                    <span class="fa-solid fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="btn-4" />
+                <ul>
+                    <li><a href=""> Income</a></li>
+                    <li><a href="">Expense</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-5" class="fourth">Banking
+                    <span class="fa-solid fa-caret-down"></span>
+                </label>
+                <input type="checkbox" id="btn-5" />
+                <ul>
+                    <li><a href=""> Bank to Bank</a></li>
+                    <li><a href="">Cash Withdrawal </a></li>
+                    <li><a href="">Cash Deposit </a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </body>
 
 </html>
