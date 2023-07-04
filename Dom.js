@@ -64,3 +64,23 @@ box2.appendChild(box3);
 const spanText = document.createElement("span");
 spanText.innerHTML = `<b style = "color:blue ">COOL!!!</b>`;
 box3.appendChild(spanText);
+
+//
+
+// element selectors getElementById()
+// this will take one argument and argument will be string and that will be the id of html element
+// if id found in dom it will return the that particular node correspond to the id
+// this will always return the single node
+
+//getElementsByTagName will return the collection of element with specific tage
+
+const elementByTag = document.getElementsByTagName("div");
+
+console.log(Array.isArray(elementByTag));
+console.log(elementByTag);
+for (let value of elementByTag) {
+  console.log(value);
+}
+
+const elementByclass = document.getElementsByClassName("box1");
+console.log(elementByclass, "elementByclass");
