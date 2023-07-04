@@ -111,3 +111,31 @@ const getByAllQuery3 = document.querySelectorAll("#box_2"); // id #idvalue
 console.log(getByAllQuery3, "getByAllQuery3");
 
 // selecting element through attributes // i will take it later
+
+// documents events
+// anything happen inside or in html element
+
+const button = document.createElement("button");
+
+button.textContent = "Click Me";
+
+box3.appendChild(button);
+
+//addEventListener
+
+// button.addEventListener("click" , (e)=>{
+//     console.log(e)
+// } );
+
+const eventCallback = (event) => {
+  console.log(event.target);
+};
+// button.addEventListener("click", (e) => {
+//   console.log(e.target); //
+// });
+
+button.addEventListener("click", eventCallback);
+
+function button2(e) {
+  console.log(e.target, "without e");
+}
