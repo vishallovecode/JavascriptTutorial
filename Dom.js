@@ -136,6 +136,6 @@ const eventCallback = (event) => {
 
 button.addEventListener("click", eventCallback);
 
-function button2(e) {
-  console.log(e.target, "without e");
+function button2(arg1) {
+  console.log(arg1.target, "without e");
 }
