@@ -10,10 +10,23 @@ function random(e) {
   container.style.backgroundColor = array[randomIndex];
 }
 
-const button = document.createElement("button");
+// const button = document.createElement("button");
 
-button.textContent = "change color";
-button.style.marginTop = "10px";
-document.body.appendChild(button);
+// button.textContent = "change color";
+// button.style.marginTop = "10px";
+// document.body.appendChild(button);
 
-button.addEventListener("click", random);
+// button.addEventListener("click", random);
+var color = "";
+
+function changeHandler(e) {
+  color = e.target.value;
+}
+
+function changeColor() {
+  const container = document.getElementById("container");
+  // container.style.backgroundColor = color;
+  container.style.backgroundColor = document.getElementById("color").value;
+}
+
+// i have input t\ere i will type

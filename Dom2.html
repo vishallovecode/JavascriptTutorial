@@ -3,12 +3,15 @@
 
 <body>
     <script defer src='Dom2.js'></script>
-    <!-- <button onclick="random(event)">Change Color</button> -->
     <div id='container'
         style="height: 300px;width: 400px; border: 2px solid black; background: black; margin-top: 30px;">
-
     </div>
+
+    <input oninput="changeHandler(event)" placeholder="Enter Name" id='color' />
+    <button onclick="changeColor(event)">Change Color</button>
+
 </body>
+
 
 </html>
 
