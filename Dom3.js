@@ -18,3 +18,7 @@ function removeALL() {
   document.getElementById("button2").removeEventListener("click", hello);
   document.getElementById("button3").removeEventListener("click", removeALL);
 }
+
+function setTheme(e) {
+  document.querySelector("body").style.background = e.target.value;
+}

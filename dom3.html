@@ -29,6 +29,12 @@
             padding: 5px;
             cursor: pointer;
         }
+
+        .select {
+            display: flex;
+            width: 300px;
+            padding: 10px;
+        }
     </style>
 </head>
 
@@ -37,6 +43,13 @@
     <button id='button1'>Add Event Listener to button2 </button>
     <button id='button2'>Remove Event Listener from button 1</button>
     <button id='button3'>Remove All</button>
+
+    <select class="select" onchange="setTheme(event)">
+        <option value='black'>Dark</option>
+        <option value='white' selected>Light</option>
+        <option value='red'>Red</option>
+
+    </select>
     <script src='Dom3.js'></script>
 </body>
 
