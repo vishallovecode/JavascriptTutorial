@@ -1,18 +1,20 @@
-function clickme(e) {
-  var count = 0;
-  alert("Hey Successfully clicked");
+document.getElementById("button1").addEventListener("click", clickme);
 
-  for (let i = 1; i <= 10; i++) {
-    document
-      .getElementById("button1")
-      .addEventListener("click", function chill() {
-        console.log("hey count3");
-      });
-    // document.getElementById("button1").addEventListener("click", hello);
-  }
+function clickme(e) {
+  console.log("click me called");
+  document.getElementById("button2").addEventListener("click", hello);
 }
 
 function hello() {
-  console.log("count");
+  console.log("Button 2 clicked");
+  document.getElementById("button1").removeEventListener("click", clickme);
 }
 // You can add multiple event listener
+
+document.getElementById("button3").addEventListener("click", removeALL);
+
+function removeALL() {
+  console.log("button3");
+  document.getElementById("button2").removeEventListener("click", hello);
+  document.getElementById("button3").removeEventListener("click", removeALL);
+}
