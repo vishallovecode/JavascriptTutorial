@@ -31,3 +31,10 @@ function buttonHandler(event) {
   event.stopPropagation();
   console.log("buttonHandler");
 }
+
+function checkBoxHandler(event) {
+  event.preventDefault();
+  alert("Checkobox clicked");
+}
+
+// immediateStopPropagation()
