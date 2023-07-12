@@ -31,15 +31,52 @@
             height: 250px;
             width: 250px;
         }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid;
+            min-height: 200px;
+            min-width: 250px;
+            max-width: 250px;
+            border-radius: 10px;
+            justify-content: space-evenly;
+            padding-bottom: 10px;
+        }
+
+        .title {
+            padding-top: 10px;
+            margin-left: 3px;
+            width: 100%;
+
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-around;
+
+        }
     </style>
 </head>
 
 <body>
     <div class='grandparent box' onclick="grandParent(event)">
+        Grand Parent
         <div class="parent box" onclick="parent(event)">
-            <div class="child box">
-                <div class="grandchild box">Click me</div>
+            Parent
+            <div class="child box" onclick="child(event)">
+                Child
+                <div class="grandchild box" onclick="grandChild(event)">Click me</div>
             </div>
+        </div>
+    </div>
+    <div class="card" onclick="cardHandler()">
+        <img
+            src='https://assets.newatlas.com/dims4/default/587d035/2147483647/strip/true/crop/6380x4253+0+2/resize/1920x1280!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Fa0%2F97%2F8f4995de4881971f4e6062d2094b%2Fdepositphotos-179881124-xl.jpg' />
+        <span class="title">Dark Chocolate</span>
+        <div class="title flex">
+            <span>₹50</span>
+            <button onclick="buttonHandler(event)">Add</button>
         </div>
     </div>
     <script src="eventbubbling.js"></script>
