@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .box {
+            border: 2px solid;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .grandparent {
+            height: 450px;
+            width: 500px;
+        }
+
+        .parent {
+            height: 350px;
+            width: 400px;
+        }
+
+        .child {
+            height: 300px;
+            width: 300px;
+        }
+
+        .grandchild {
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='grandparent box' onclick="grandParent(event)">
+        <div class="parent box" onclick="parent(event)">
+            <div class="child box">
+                <div class="grandchild box">Click me</div>
+            </div>
+        </div>
+    </div>
+    <script src="eventbubbling.js"></script>
+</body>
+
+</html>
