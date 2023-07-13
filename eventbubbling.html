@@ -56,6 +56,17 @@
             justify-content: space-around;
 
         }
+
+        #capture {
+            width: 300px;
+            height: 250px;
+
+        }
+
+        #childCap {
+            width: 100px;
+            height: 100px;
+        }
     </style>
 </head>
 
@@ -81,6 +92,11 @@
     </div>
 
     <input type='checkbox' onclick="checkBoxHandler(event)" />
+
+    <h2>Event Capturing</h2>
+    <div id='capture' class="box">Parent
+        <div id='childCap' class="box">Click me</div>
+    </div>
     <script src="eventbubbling.js"></script>
 </body>
 
