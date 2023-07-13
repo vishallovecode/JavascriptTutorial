@@ -67,11 +67,29 @@
             width: 100px;
             height: 100px;
         }
+
+        .container {
+            display: flex;
+            padding: 10px;
+            height: 400px;
+            width: 500px;
+            margin: auto
+        }
+
+        .box1 {
+            height: 100px;
+            width: 100px;
+            border: 2px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <div class='grandparent box' onclick="grandParent(event)">
+    <!-- <div class='grandparent box' onclick="grandParent(event)">
         Grand Parent
         <div class="parent box" onclick="parent(event)">
             Parent
@@ -96,6 +114,30 @@
     <h2>Event Capturing</h2>
     <div id='capture' class="box">Parent
         <div id='childCap' class="box">Click me</div>
+    </div> -->
+    <!-- <div class='container box' >
+        <div id='1' onclick="handleCard(event)" class="box1">Box1</div>
+        <div id='2' onclick="handleCard(event)" class="box1">Box2</div>
+        <div id='3' onclick="handleCard(event)" class="box1">Box3</div>
+        <div id='4' onclick="handleCard(event)" class="box1">Box4</div>
+        <div id='5' onclick="handleCard(event)" class="box1">Box5</div>
+        <div id='6' onclick="handleCard(event)" class="box1">Box6</div>
+        <div id='7' onclick="handleCard(event)" class="box1">Box7</div>
+        <div id='8' onclick="handleCard(event)" class="box1">Box8</div>
+        <div id='9' onclick="handleCard(event)" class="box1">Box9</div>
+        <div id='10' onclick="handleCard(event)" class="box1">Box10</div>
+    </div> -->
+    <div id='parent' class='container box'>
+        <div id='1' onclick="handleCard(event)" class="box1">Box1</div>
+        <div id='2' class="box1">Box2</div>
+        <div id='3' class="box1">Box3</div>
+        <div id='4' class="box1">Box4</div>
+        <div id='5' class="box1">Box5</div>
+        <div id='6' class="box1">Box6</div>
+        <div id='7' class="box1">Box7</div>
+        <div id='8' class="box1">Box8</div>
+        <div id='9' class="box1">Box9</div>
+        <div id='10' class="box1">Box10</div>
     </div>
     <script src="eventbubbling.js"></script>
 </body>
