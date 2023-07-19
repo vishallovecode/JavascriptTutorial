@@ -40,6 +40,7 @@ function generateOrder() {
 }
 
 const func1 = generateOrder();
+
 // here we are creating the reference of the function return by the generateOrder function , so generateOrder execution context will be there in memory until unless we run all the code
 
 func1();
@@ -77,3 +78,22 @@ const setName = sum(); //  data  ='Vishal'
 
 setName("Sudghanshu"); // it will return nam,er
 setName("raja");
+
+// Currrying
+
+function multiply(c) {
+  return (a) => {
+    return (b) => {
+      return a * b * c;
+    };
+  };
+}
+
+multiply(2)(3)(4);
+multiply();
+
+function nthMultiply() {}
+nthMultiply(1)(2)(); // =>2
+nthMultiply(2)(4)(6)(7)(8)();
+nthMultiply(2)(); // 2
+nthMultiply(1)(2)(3)(4)(6)(6)(7)(); //
