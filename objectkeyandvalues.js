@@ -85,3 +85,57 @@ for (var property in check) {
 
 // message   check['message']
 // condition check['condition']
+
+// What is object ??
+// different way to create the object
+
+// 1.Object Literal
+
+const studentsData = {};
+studentsData.name = "Jimo";
+// studentsData variable is object
+
+const studentData1 = {
+  name: "TIRO",
+  mobile: "Viro",
+};
+
+// 2.using new keybord
+
+const employeedList = new Object({ name: "Hello" });
+employeedList.company = "Zee";
+console.log(employeedList, "employeedList");
+
+// 3 Object.create
+
+const hospitalList = Object.create(null);
+const hotelList = Object.create(null);
+hospitalList.name = "Manipal";
+console.log("hospitalList", hospitalList);
+
+// 4 pillars of oops
+
+// encapsulation
+// polymorphism
+// abtraction
+// inheritance
+
+// spreading the object
+
+const student = {
+  firtName: "Chimo",
+  lastName: "Revi",
+  mobile: "991537777",
+  city: "mexico",
+  country: "India",
+};
+
+// how you can access the object value
+// const fName = students.firtName;
+// const lName = students.lastName;
+// const phone = students.mobile;
+// const city = students.city;
+// object spread
+const { firtName: studentName, lastName, mobile, city, country } = student;
+// console.log(firtName); this will give you the errror
+console.log(studentName, lastName, mobile, city, country);
