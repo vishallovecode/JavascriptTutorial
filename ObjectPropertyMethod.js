@@ -50,7 +50,7 @@ const employee = {
   firstName: "Chim",
   lastName: "Rim",
   getFullName: function () {
-    console.log("this", this);
+    console.log("this", this); //  employee
     return this.firstName + " " + this.lastName;
   },
   salary: 300000,
@@ -59,12 +59,66 @@ const employee = {
     return (this.salary * this.increment) / 100 + this.salary;
   },
   getIncrement: () => {
-    console.log("this", this);
+    console.log("this inside arrow function", this);
     return this.increment;
   },
 };
+// if you are tring to access this inside normal function insdie object than this will; point to the that object itself
 
-console.log(employee.getFullName());
+// if you are tring to access this inside arrow  function inside object than this will not point to the that object this will point out window object in this case
+
+console.log(employee.getFullName, "getFullName");
+console.log(employee.getFullName(), "getFullName call");
 console.log(employee.getIncrementSalary());
 console.log(employee.getIncrement());
 // Destructring
+
+// {} one empyt object
+const data123 = {}; // one empty
+
+const sum = (a, b) => {
+  return a + b;
+};
+
+sum; // this simple variable
+
+sum(1, 2); // invoked functions
+
+// Getters and setters in Javascript Object
+// this are like only function
+
+const vehicle = {
+  type: "Car",
+  tyre: 4,
+  // this is called a getter for tyre
+  get getTyre() {
+    // if (this.tyre > 4) {
+    //   return "car";
+    // } else {
+    //   return "bike";
+    // }
+    return this.tyre;
+  },
+  // setter for tyre
+  set setTyre(count) {
+    // you need to go through sanitization
+    // if validation true than upodate else return error
+    if (isNaN(count)) {
+      this.tyre = 4;
+    } else {
+      this.tyre = count;
+    }
+  },
+};
+
+console.log("gettters", vehicle.tyre);
+
+vehicle.setTyre = 6;
+// vehicle.tyre = "chim";
+vehicle.setTyre = "chim";
+console.log("gettters", vehicle.getTyre); //  no need to invoked getter function directly
+
+// const humane = {
+//   place: "earth",
+// };
+// humane.place = "Moon";
