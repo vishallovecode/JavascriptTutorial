@@ -46,6 +46,8 @@ console.log("Resreved keyword of js as key::", student1);
 //     return (this.salary * this.increment) / 100 + this.salary;
 //   }
 
+// important
+
 const employee = {
   firstName: "Chim",
   lastName: "Rim",
@@ -122,3 +124,42 @@ console.log("gettters", vehicle.getTyre); //  no need to invoked getter function
 //   place: "earth",
 // };
 // humane.place = "Moon";
+
+// object.create vs object.assign
+
+// Object.create  is used to create new object
+
+const user = {
+  name: "Vishal",
+  id: "64wsdcsbssdd",
+};
+
+// passing null
+const obj12 = Object.create(null); // this will create new object
+obj12.name = "Vishal";
+console.log(obj12);
+
+// passing existing object
+
+const obj123 = Object.create(user); // THIS WILLL CREATE A DEEP COPY OBJECT
+
+console.log(obj123);
+
+console.log(obj123.name);
+
+obj123.college = "LPU";
+
+console.log(obj123, user);
+
+// Object.assign   THIS WILLL CREATE A shallow COPY OBJECT
+
+const sourceObj = {
+  collegeName: "LPU",
+  onlinePortal: "Newton",
+};
+
+const targetObject = {};
+
+const resultObjecty = Object.assign(targetObject, sourceObj); // this will return you the target object
+console.log(resultObjecty);
+console.log(targetObject === resultObjecty);
