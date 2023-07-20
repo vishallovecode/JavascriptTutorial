@@ -130,12 +130,24 @@ const student = {
   country: "India",
 };
 
+console.log(student); //undefined
+
 // how you can access the object value
 // const fName = students.firtName;
 // const lName = students.lastName;
 // const phone = students.mobile;
 // const city = students.city;
-// object spread
+// object spread //  object destructring
 const { firtName: studentName, lastName, mobile, city, country } = student;
+
+// const studentName = student.firtName;
+
 // console.log(firtName); this will give you the errror
 console.log(studentName, lastName, mobile, city, country);
+
+//
+
+// string tempalte literal
+
+const message = `Hey ${studentName}`;
+console.log(message);
