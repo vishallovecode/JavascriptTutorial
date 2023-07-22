@@ -143,13 +143,11 @@ console.log(obj12);
 
 const obj123 = Object.create(user); // THIS WILLL CREATE A DEEP COPY OBJECT
 
-console.log(obj123);
-
-console.log(obj123.name);
-
 obj123.college = "LPU";
 
-console.log(obj123, user);
+console.log(obj123, user, " checlking whether shallow copy or deep copy");
+
+console.log(" obj123 this object is created using Object.create", obj123);
 
 // Object.assign   THIS WILLL CREATE A shallow COPY OBJECT
 
