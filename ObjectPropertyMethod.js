@@ -129,9 +129,12 @@ console.log("gettters", vehicle.getTyre); //  no need to invoked getter function
 
 // Object.create  is used to create new object
 
+// single level
+
 const user = {
   name: "Vishal",
   id: "64wsdcsbssdd",
+  array: [1, 2, 3, 4, 5],
 };
 
 // passing null
