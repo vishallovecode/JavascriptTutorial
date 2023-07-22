@@ -60,3 +60,18 @@ resultObject["name"] = "Not A number";
 
 console.log(resultObject); //
 console.log(object); //
+
+const newtonStudents = ["Tim", "Tom", "Chim", "Chom"];
+
+const deepCopy = [...newtonStudents];
+deepCopy.push("deepak");
+console.log(deepCopy, "print deep copy details");
+console.log(newtonStudents, " after deep copy original  array");
+
+// shallow copy
+const newtonStudentsShallowCopy = newtonStudents;
+
+newtonStudentsShallowCopy.push("Rim");
+
+console.log(newtonStudentsShallowCopy, "Shallow copy");
+console.log(newtonStudents, " after shallow copy original  array");
