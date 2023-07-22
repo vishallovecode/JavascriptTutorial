@@ -159,8 +159,13 @@ const sourceObj = {
   onlinePortal: "Newton",
 };
 
+// source object
+// object assign is creatin g shallow copy for targetobject
 const targetObject = {};
 
 const resultObjecty = Object.assign(targetObject, sourceObj); // this will return you the target object
 console.log(resultObjecty);
 console.log(targetObject === resultObjecty);
+targetObject.cheker = true;
+
+console.log(sourceObj, targetObject);
