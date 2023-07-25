@@ -6,7 +6,7 @@ console.log("Learning JS Date");
 
 const currentDate = new Date();
 console.log(currentDate); // current time date year in ist
-
+currentDate.toTimeString()();
 console.log("currentDate.getTime()", currentDate.getTime());
 console.log("currentDate.getDate()", currentDate.getDate());
 console.log("currentDate.getMonth()", currentDate.getMonth()); // 6
