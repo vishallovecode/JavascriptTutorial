@@ -100,3 +100,36 @@ console.log(studentDetails);
 // spread operator is use for merging two object
 // adding key and item to the object
 // updating nested object
+
+const array = [
+  {
+    city: "Kanpur",
+    locality: "Vishn112upuri",
+    pincode: 208121002,
+    landmark: "Em11erland",
+    flatNo: "4/27118B-1",
+  },
+  {
+    city: "Kanpur12",
+    locality: "Vishnupuri",
+    pincode: 208002,
+    landmark: "Emerland",
+    flatNo: "4/278B-1",
+  },
+  {
+    city: "sasdxa",
+    locality: "Vish1csnupuri",
+    pincode: 2080344502,
+    landmark: "Emscdserland",
+    flatNo: "4/278ddB-1",
+  },
+];
+
+const arrayObject = array.map((obj) => {
+  console.log(obj);
+  return {
+    ...obj,
+    isDelivered: true,
+  };
+});
+console.log(arrayObject);
