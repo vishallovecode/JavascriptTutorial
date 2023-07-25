@@ -95,6 +95,26 @@ const studentDetails = {
   // city: "Bangalore",
 };
 
+const result = {
+  ...studentAdress,
+  college: {
+    ...studentCollegeDetails,
+  },
+};
+//  {
+//   city: "Kanpur",
+//   locality: "Vishnupuri",
+//   pincode: 208002,
+//   landmark: "Emerland",
+//   flatNo: "4/278B-1",
+//  college: {
+//   college: "Newton School",
+//   mode: "Online",
+//   degree: "FSD",
+//   city: "Bangalore",
+//  }
+// };
+
 console.log(studentDetails);
 
 // spread operator is use for merging two object
@@ -133,3 +153,5 @@ const arrayObject = array.map((obj) => {
   };
 });
 console.log(arrayObject);
+
+// i want to add one more key which nested object
