@@ -16,7 +16,7 @@ function callMe() {
   console.log("this inside function", this); // window
 }
 
-callMe();
+callMe(); // function invocation here this will point out to the window object
 
 // if function are part of the object
 
@@ -28,6 +28,11 @@ var employee = {
 
   // this cann happen only in noraml function not in arrow function
   printName: function () {
+    // this === emplyee
+    function callMe4() {
+      console.log("callMe4", this); //  this != window //
+    }
+    callMe4(); // function invocation  this => window
     return this.name + " " + this.lastName;
   },
   printNameWithArrow: () => {
@@ -38,7 +43,7 @@ var employee = {
   },
 };
 
-const fullName = employee.printName();
+const fullName = employee.printName(); // method call this will point to the value before .
 console.log(fullName);
 const fullName2 = employee.printNameWithArrow();
 console.log(fullName2);
@@ -65,3 +70,7 @@ console.log(fullName2);
 // }
 
 // console.log(lastName); //Sharma
+
+//
+
+//In normal function this does not depends on the what is the parents context it always depends on how it call
