@@ -153,7 +153,7 @@ console.log(arrayObject);
 //   },
 // };
 
-const employee1 = {
+let employee1 = {
   name: "Vishal",
   college: "LPU",
   city: {
@@ -179,6 +179,8 @@ employee1 = {
     },
   },
 };
+
+console.log(employee1);
 // employee1 = {
 //   name: "Vishal",
 //   college: "Newnton",
