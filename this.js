@@ -30,7 +30,7 @@ var employee = {
   printName: function () {
     // this === emplyee
     function callMe4() {
-      console.log("callMe4", this); //  this != window //
+      console.log("callMe4", this); //  this != employee // this  => window
     }
     callMe4(); // function invocation  this => window
     return this.name + " " + this.lastName;
