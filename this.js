@@ -102,5 +102,49 @@ const employee123 = {
 const fullName1 = employee123.printName(); // method invocation
 console.log(fullName1); //??
 
-// In arrow this will take the context of its immediate parent function
+// In arrow function this will take the context of its immediate parent  (function)context
+// In arrow function this will take the 'this' of its immediate parent  (function)context
 // In arrow function this will not point to its own context  it will always point to it parent context
+
+const arrowFunction = () => {
+  //  this = > window
+  function normalFunction() {
+    // this  =>  window
+    const arrow = () => {
+      console.log("nested", this); // ?? window
+    };
+    arrow();
+  }
+  normalFunction(); // function invocation
+};
+
+arrowFunction(); // function invocation  =>
+
+//Example
+
+const students = {
+  name: "Vishal",
+  lastName: "Sharma",
+  college: "Newton",
+  printCollegeName: () => {
+    console.log(this.college); //
+  },
+  printName: function () {
+    console.log("1==>", this.name, this.lastName); //
+    function Func1() {
+      console.log("2==>", this.name);
+      function func2() {
+        console.log("3==>", this.name); //
+        const fun3 = () => {
+          console.log("3==>", this.name); //
+        };
+        fun3();
+      }
+      func2();
+    }
+    Func1();
+  },
+};
+
+students.printName();
+students.printCollegeName();
