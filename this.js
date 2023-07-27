@@ -127,24 +127,71 @@ const students = {
   lastName: "Sharma",
   college: "Newton",
   printCollegeName: () => {
-    console.log(this.college); //
+    console.log(this.college); // this  => windwo //  undefined
   },
   printName: function () {
-    console.log("1==>", this.name, this.lastName); //
+    // this  => students
+    console.log("1==>", this.name, this.lastName); //   Vishal Sharma
     function Func1() {
-      console.log("2==>", this.name);
+      console.log("2==>", this.name); // this=>window// window.name  => ''
       function func2() {
-        console.log("3==>", this.name); //
+        console.log("3==>", this.name); // // this => window
         const fun3 = () => {
-          console.log("3==>", this.name); //
+          console.log("3==>", this.name); // this  => window
         };
         fun3();
       }
       func2();
     }
-    Func1();
+    Func1(); // function invocation this  => window
+  },
+};
+students.printName(); // method invocation
+students.printCollegeName(); // in thr case of arrow it will always point to its parent context(this)
+
+// this  => context  constructor function
+// in constructor this will be always initialize with empty {}
+
+function Student() {
+  this; // {}
+  this.name = "Vishal";
+}
+
+const student = new Student();
+// student  ==> {name: 'Vishal'}
+
+// default binding => JS  => this
+
+// but if we want to give our own this to the function how can we do ?? ( this will note will apply in case normal function)
+// We cannot give or provide explicit this to the arrow function
+
+const girl = {
+  firstName: "Barbie Girl",
+  printName: function () {
+    function nestedPrintFucntion() {
+      // this  ==> girl  => object
+      console.log("this", this.firstName); //  udefined => Barbie Girl
+    }
+    nestedPrintFucntion.call(girl);
+    // nestedPrintFucntion.call(this); this is equal tot the line 175
   },
 };
 
-students.printName();
-students.printCollegeName();
+girl.printName();
+
+const doctor = {
+  firstName: "Vishal",
+  lastName: "Sharma",
+  age: 27,
+  printFullName: function () {
+    console.log(this.firstName, this.age, this.lastName);
+  },
+};
+
+const doctor1 = {
+  lastName: "Timo",
+  firstName: "Rimo",
+};
+doctor.printFullName();
+
+doctor.printFullName.call(doctor1); //
