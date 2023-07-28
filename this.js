@@ -86,13 +86,12 @@ const employee123 = {
   name: "Vishal",
   lastName: "Sharma",
   printName: function () {
-    // this =>employee123
     const innerFunction = () => {
-      console.log("innerFunction", this); // ?? employee123
+      console.log("innerFunction", this);
     };
     innerFunction();
     function normalInnerFunction() {
-      console.log("normalInnerFunction", this); // ?? window
+      console.log("normalInnerFunction", this);
     }
     normalInnerFunction();
     return this.name + this.lastName;
@@ -203,8 +202,8 @@ doctor.printFullName.apply(doctor1); //
 // there is differec in second argument  in apply you have to pass the argument as array of list
 // but in the case of call you can pass the seperated argument
 
-function getEmployeeSalary(variable, tds) {
-  console.log(this, variable, tds);
+function getEmployeeSalary(variable, tds, th) {
+  console.log(this, variable, tds, th);
 }
 
 const emp1 = {
@@ -226,3 +225,67 @@ getEmployeeSalary.call(emp1, 400000, 30);
 getEmployeeSalary.apply(emp1, [400000, 30, 134, 3445]);
 getEmployeeSalary.call(emp1, 20000, 30);
 getEmployeeSalary.apply(emp1, [300000, 30]);
+
+// function biding  => bound function
+
+// here bind return a new function  binded with the first srgument pass in the bind
+const boundFuction = getEmployeeSalary.bind(emp1, 123, 356, 12324, 23454);
+// boundFuction variable is function reference which is binded with emp1
+// inside  boundFuction we can access emp1 as this
+boundFuction("Vishal", "Vishal", "Vishal");
+
+// window
+const students123 = {
+  name: "Vishal",
+  lastName: "Sharma",
+  college: "Newton",
+  printCollegeName: () => {
+    console.log("0=>", this.college); // ?? undefined
+  },
+  printName: function () {
+    // this  => students123
+    console.log("1==>", this.name, this.lastName); // ?? Vishal Sharma
+    function Func1() {
+      console.log("2==>", this.name); // ?? this => window.namr  = ""
+      function func2() {
+        console.log("3==>", this.name); // this  => students123
+        const fun3 = () => {
+          console.log("4=>", this.name); //??  this => window
+        };
+        fun3();
+      }
+      func2.call(students123); //  here we pass argument as comma seperated function invocation this=>window
+      func2.apply(students123); // we pass argument as array
+    }
+    Func1(); // function invocation  this  => window
+  },
+};
+students123.printName(); // method invocation
+students123.printCollegeName();
+
+// arrow function this  => will point to the its parent context
+
+const employee1234 = {
+  name: "Vishal",
+  lastName: "Sharma",
+  printName: function () {
+    // this => employe1234
+    const innerFunction = () => {
+      console.log("innerFunction", this); //  this  => 1234
+    };
+    innerFunction();
+    function normalInnerFunction() {
+      console.log("normalInnerFunction", this); //  window this  => context
+      const CallMe = () => {
+        console.log(this); // ?? window
+      };
+      CallMe();
+    }
+    normalInnerFunction(); // function invocation this => window
+    return this.name + this.lastName;
+  },
+};
+
+employee1234.printName();
+
+// this  => object   ||  undefined  (strict-mode)
