@@ -16,7 +16,27 @@ console.log(dsecriptor, "dsecriptor");
 
 // we have function called definedPropety
 
-Object.defineProperty(employee, "firstName", { writable: false });
+for (let name in employee) {
+  console.log(name, "here for");
+}
+
+// writable is false than you cannot change the value
+// if enumrable is fale you cannot iterate that  key
+Object.defineProperty(employee, "firstName", {
+  writable: false,
+  enumerable: false,
+  configurable: false,
+});
+
+// this will throw error you cannot update the propertyName again
+// once configurable is make false you cannot reset the value of configurable key and writable key
+// configurable : false means cannot modify cannot delete  cannot definedProperty again
+Object.defineProperty(employee, "firstName", {
+  configurable: true,
+});
+for (let name in employee) {
+  console.log(name, "here after making enumerable:false to firstName");
+}
 
 let dsecriptor1 = Object.getOwnPropertyDescriptors(employee);
 
