@@ -107,52 +107,6 @@ console.log(arrayObject);
 
 // i want to add one more key which nested object
 
-// let employee = {
-//   user: {
-//     address: {
-//       country: {
-//         state: {
-//           city: {
-//             postOffice: {
-//               pinCode: 208001,
-//             },
-//           },
-//         },
-//       },
-//     },
-//   },
-// };
-
-// // ...
-
-// // updating the poncode 208002
-
-// console.log("Employyee", employee);
-
-// // I did not explain
-// employee = {
-//   ...employee,
-//   user: {
-//     ...employee.user,
-//     address: {
-//       ...employee.user.address,
-//       country: {
-//         ...employee.user.address.country,
-//         state: {
-//           ...employee.user.address.country.state,
-//           city: {
-//             ...employee.user.address.country.state.city,
-//             postOffice: {
-//               ...employee.user.address.country.state.city.postOffice,
-//               pinCode: 560102,
-//             },
-//           },
-//         },
-//       },
-//     },
-//   },
-// };
-
 let employee1 = {
   name: "Vishal",
   college: "LPU",
@@ -191,3 +145,42 @@ console.log(employee1);
 // {
 //   keys spread
 // }
+
+let employee = {
+  user: {
+    address: {
+      country: {
+        state: {
+          city: {
+            postOffice: {
+              pinCode: 208001,
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
+employee = {
+  ...employee,
+  user: {
+    // ...employee.user,  { address: { country: {  state: {  city: {  postOffice: {  pinCode: 208001,   },}, }  },  },}
+    address: {
+      ...employee.user.address, //  { country: {  state: {  city: {  postOffice: {  pinCode: 208001,   },}, }  }
+      country: {
+        ...employee.user.address.country, // {  state: {  city: {  postOffice: {  pinCode: 208001,   },}, }
+        state: {
+          ...employee.user.address.country.state, // {  city: {  postOffice: {  pinCode: 208001,   },}, }
+          city: {
+            ...employee.user.address.country.state.city, // {  postOffice: {  pinCode: 208001,   },}
+            postOffice: {
+              ...employee.user.address.country.state.city.postOffice, // {  pinCode: 208001  }
+              pinCode: 560102,
+            },
+          },
+        },
+      },
+    },
+  },
+};
