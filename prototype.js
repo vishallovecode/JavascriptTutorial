@@ -87,9 +87,9 @@ console.log("stud1", Object.getPrototypeOf(stud1));
 // this
 
 let animal12 = {
-  walk() {
+  walk(s) {
     console.log("I can walk");
-    console.log("animal12", this);
+    console.log(s, this);
   },
   eat() {
     console.log("I can walk");
@@ -101,9 +101,28 @@ const cow123 = {
   callMe() {
     console.log("cow", this);
   },
+  eat() {
+    console.log("Rabbit eating");
+  },
   __proto__: animal12,
 };
 
 cow123.callMe(); // cow
-cow123.walk(); //method call
-animal12.walk();
+cow123.walk("Cow123"); //method call
+animal12.walk("animal123"); //\
+
+cow123.eat(); //
+animal12.eat(); //
+
+//
+
+const array = [1234];
+const array1 = [1234, 12];
+// we are adding property to the Array prototype
+Array.prototype.printWithMessage = function () {
+  console.log("Hey I am print with message");
+};
+
+array.printWithMessage();
+const a = [];
+console.log(a);
