@@ -74,3 +74,35 @@ const stud1 = {
 Object.setPrototypeOf(stud1, stud);
 
 console.log("stud1", Object.getPrototypeOf(stud1));
+
+// javascript  function
+
+// // const data  = Object.create(obj123 , {
+//     key:{
+//         value :''
+//     }
+// })
+// here obj123 will be protoype for data object
+
+// this
+
+let animal12 = {
+  walk() {
+    console.log("I can walk");
+    console.log("animal12", this);
+  },
+  eat() {
+    console.log("I can walk");
+  },
+};
+
+const cow123 = {
+  name: "apni gaye",
+  callMe() {
+    console.log("cow", this);
+  },
+  __proto__: animal12,
+};
+
+cow123.callMe(); // cow
+cow123.walk(); //
