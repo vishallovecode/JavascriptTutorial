@@ -26,7 +26,6 @@ console.log(animal);
 // protoypical inheritance
 
 // Prototype chaining
-
 const robot = {
   speak: () => {
     console.log("hey I am speaking");
@@ -37,13 +36,11 @@ const robot = {
   },
   owner: "Robot pvt ltd.",
 };
-
 const robotBio = {
   command: "Medicines prescription",
   __proto__: robot,
   //   __proto__: dentistRobot
 };
-
 const dentistRobot = {
   name: "Dentist Leela",
   work: "Clean teeth  , remove teeth , break teeh",
@@ -53,5 +50,5 @@ const dentistRobot = {
 // Rules
 
 // The value __proto__ should not be value apart from null and Object;
-//There should be be cyclic chaining
+//There should not  be cyclic chaining
 // Every object have only one protoype
