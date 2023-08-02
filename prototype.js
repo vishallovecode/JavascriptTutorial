@@ -24,3 +24,34 @@ console.log(animal);
 // Object  have prototype which point to the null
 // A object can access the property of it parent object using prototype concept this is called
 // protoypical inheritance
+
+// Prototype chaining
+
+const robot = {
+  speak: () => {
+    console.log("hey I am speaking");
+  },
+  isPublicUse: false,
+  walk: () => {
+    console.log("hey I am speaking");
+  },
+  owner: "Robot pvt ltd.",
+};
+
+const robotBio = {
+  command: "Medicines prescription",
+  __proto__: robot,
+  //   __proto__: dentistRobot
+};
+
+const dentistRobot = {
+  name: "Dentist Leela",
+  work: "Clean teeth  , remove teeth , break teeh",
+  __proto__: robotBio,
+};
+
+// Rules
+
+// The value __proto__ should not be value apart from null and Object;
+//There should be be cyclic chaining
+// Every object have only one protoype
