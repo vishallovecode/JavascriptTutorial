@@ -126,3 +126,10 @@ Array.prototype.printWithMessage = function () {
 array.printWithMessage();
 const a = [];
 console.log(a);
+
+Array.prototype.cityOfDeviPurnima = "Chhatisgarh";
+
+const array123 = ["devi"];
+
+console.log(array123);
+console.log(array123.cityOfDeviPurnima);
