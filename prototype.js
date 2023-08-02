@@ -105,4 +105,5 @@ const cow123 = {
 };
 
 cow123.callMe(); // cow
-cow123.walk(); //
+cow123.walk(); //method call
+animal12.walk();
