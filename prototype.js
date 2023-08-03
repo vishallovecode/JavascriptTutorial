@@ -237,7 +237,7 @@ Function.prototype.mybind = function (object, ...args1) {
   const func = this;
   return function (...arg2) {
     // func.mycall(object, ...args, ...arg2);
-    func.mycall(object, [...args, ...arg2]);
+    func.myapply(object, [...args, ...arg2]);
   };
 };
 
