@@ -191,8 +191,10 @@ emp3.printData();
 
 // Creating a polffill for call
 
+// do whether browser support call function
 Function.prototype.mycall = function (obj, ...args) {
   //this =>checker
+  // args = [1, 2, 3, 4, 5]
 
   //obj = {
   //   name: "Vishal Sharma",
@@ -215,9 +217,16 @@ Function.prototype.mycall = function (obj, ...args) {
 const st = {
   name: "Vishal Sharma",
 };
-function checker() {
+function checker(a, b, c, d) {
   console.log(this.name);
 }
 
 // checker.call(st); //  Vishal Sharma
-checker.mycall(st); //  Vishal Sharma what  will be the value this ??
+checker.mycall(st, 1, 2, 3, 4, 5); //  Vishal Sharma what  will be the value this ??
+
+Function.prototype.myapply = function (obj, args) {
+  obj.callFunc = this;
+  obj.callFunc(...args);
+};
+
+checker.myapply(st, [1, 2, 3, 4]);
