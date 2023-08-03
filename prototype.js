@@ -230,3 +230,16 @@ Function.prototype.myapply = function (obj, args) {
 };
 
 checker.myapply(st, [1, 2, 3, 4]);
+
+// Polyfill for bind function
+
+Function.prototype.mybind = function (object, ...args1) {
+  const func = this;
+  return function (...arg2) {
+    // func.mycall(object, ...args, ...arg2);
+    func.mycall(object, [...args, ...arg2]);
+  };
+};
+
+const checkerinstance = checker.mybind(st, 1, 2, 3, 4, 5); // args1
+checkerinstance(1, 2, 3, 4); // args2
