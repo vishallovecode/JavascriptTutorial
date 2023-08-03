@@ -191,10 +191,26 @@ emp3.printData();
 
 // Creating a polffill for call
 
-Function.prototype.mycall = function () {
-  // this ?? => function
-  // logic for call
+Function.prototype.mycall = function (obj, ...args) {
+  //this =>checker
+
+  //obj = {
+  //   name: "Vishal Sharma",
+  // };
+
+  obj.callFunc = this;
+
+  //obj = {
+  //   name: "Vishal Sharma",
+  // callFunc: function () {
+  //   console.log(this.name);
+  // }
+  // };
+
+  obj.callFunc(...args); //method call
 };
+
+// anyObject.callFunc();
 
 const st = {
   name: "Vishal Sharma",
@@ -204,4 +220,4 @@ function checker() {
 }
 
 // checker.call(st); //  Vishal Sharma
-checker.mycall(st); //  Vishal Sharma
+checker.mycall(st); //  Vishal Sharma what  will be the value this ??
