@@ -17,6 +17,11 @@ cow.__proto__ = animal; // here __proto__ is behaving like a setter for cow obje
 console.log(cow);
 console.log(animal);
 
+// we are able to access it parent properties
+for (let value in cow) {
+  console.log("value=>", value);
+}
+
 // __proto__ behave like setter and getter for prototype and prototype is hidden property
 // of the objectb which  refer to the another object  or null
 // Prototype Object => this is object which is point by any another object prototype
@@ -237,9 +242,11 @@ Function.prototype.mybind = function (object, ...args1) {
   const func = this;
   return function (...arg2) {
     // func.mycall(object, ...args, ...arg2);
-    func.myapply(object, [...args, ...arg2]);
+    func.myapply(object, [...args1, ...args2]);
   };
 };
 
 const checkerinstance = checker.mybind(st, 1, 2, 3, 4, 5); // args1
 checkerinstance(1, 2, 3, 4); // args2
+
+// const data1 = [1,2,3]
