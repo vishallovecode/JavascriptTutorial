@@ -188,3 +188,20 @@ const emp3 = new Employee("Vishal3");
 emp1.printData();
 emp2.printData();
 emp3.printData();
+
+// Creating a polffill for call
+
+Function.prototype.mycall = function () {
+  // this ?? => function
+  // logic for call
+};
+
+const st = {
+  name: "Vishal Sharma",
+};
+function checker() {
+  console.log(this.name);
+}
+
+// checker.call(st); //  Vishal Sharma
+checker.mycall(st); //  Vishal Sharma
