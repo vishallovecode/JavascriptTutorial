@@ -10,15 +10,32 @@ class Employee {
     this.name = name;
   }
 
-  //   constructor(name , salary) {
-  //     this.name  =name
-  //     this.salary =salary;
-  //   }
+  // function
+  printName() {
+    console.log(this.name);
+  }
+
+  // setter
+  set setName(value) {
+    if (value.length >= 1) this.name = value;
+    else throw Error("Name should not be less than zero");
+  }
+
+  // getter
+  get getName() {
+    return this.name;
+  }
 }
 
-const emp1 = new Employee("Vishal");
-const emp2 = new Employee("Vishal12", 200000);
-
-console.log(emp1);
-console.log("emp2=>", emp2);
+// oops
 console.log(typeof Employee); // function
+
+const emp1 = new Employee("Vishal");
+console.log(emp1);
+emp1.setName = "TIm tom";
+
+emp1.printName();
+
+console.log(emp1.getName);
+
+//
