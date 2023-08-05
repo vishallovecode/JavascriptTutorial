@@ -108,3 +108,11 @@ nthMultiply(1)(2)(3)(4)(6)(6)(7)(); //
 // nthMultiply(1)(2)(3)(4)(5)(6)(7).....(n)();
 
 // currying is seperating the argument in different function call and it highly use for hof
+
+// nthMultiply(1)(2)(3)(4)(5)(6)(7)();
+
+const result = multiply(2)(3)(4); // 2*3*4=> 24
+
+result; // 24
+
+cons;
