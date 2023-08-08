@@ -71,7 +71,6 @@ class Vehicle {
 class FourWheeler extends Vehicle {
   constructor(...args) {
     // args  =>
-
     super(...args);
   }
   getMileage(value) {
@@ -86,5 +85,6 @@ class FourWheeler extends Vehicle {
 const four = new FourWheeler("mahindra", "xuv700", "black", 4);
 four.speed(200);
 four.getMileage(400);
+console.log(four.getVehicleName());
 
 console.log(four);

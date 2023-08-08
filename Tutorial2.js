@@ -315,12 +315,11 @@ console.log("tts=>>", tts); //
 console.log(2 > 3); //
 console.log(2 < 3); //
 
-console.log(' "2" < 3', "2" < 3); //
-
+console.log(' "2" < 3', "2" < 3);
 console.log("A" < "B"); //
 console.log("a" < "A"); //
 
-console.log(' "2" < 3', "2" < 3); //
+console.log(' "2" < 3', "2" < 3);
 
 console.log(+"12vishal"); // NaN
 console.log(+"vishal123"); // NaN
