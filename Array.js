@@ -308,7 +308,7 @@
 // // filter function takes first argument as func , if first argument is not function code will not work
 // // as name suggest filter use to filter out the data from array and give the new array with filtered data//
 // // filter hof always return the array/
-// // if condition match its return that element else its return empty array
+// // if condition match its return that element with array else its return empty array
 
 // var number1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -678,7 +678,4 @@ console.log(studentName.indexOf("R"));
 console.log(studentName.length);
 console.log(studentName.includes("Raj"));
 console.log(studentName.includes("Raj"));
-studentName.charAt(0); /
-
-
-
+studentName.charAt(0);
