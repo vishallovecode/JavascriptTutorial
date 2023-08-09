@@ -1,3 +1,4 @@
+// Optinal Chaining
 const object = {
   name: "Vishal",
   city: {
@@ -6,7 +7,7 @@ const object = {
     },
   },
 };
-
+object.rajKumar; //  udefined
 const pincode = object?.city?.address?.pincode;
 
 // if (object) {
@@ -36,7 +37,7 @@ console.log(filterEmployee); //  [tim tom]  { name: "Tim Tom", salary: 4500000 }
 
 // null undefined
 const a = { name: null };
-console.log(a?.name?.name); // undefined
+console.log(a?.name); // undefined
 
 const array = null;
 
@@ -44,8 +45,15 @@ const data = array?.filter((a) => a);
 console.log(data); //
 
 const array1 = 2345;
-const data1 = array1?.filter((a) => a);
+console.log("array1.filter", array1.filter); //
+// const data1 = Array.isArray(array1) && array1?.filter((a) => a);
+const data1 = typeof array1?.filter === "function" && array1?.filter((a) => a);
 console.log(data1); //
 
 // isArray
-// isprototypeof
+// // isprototypeof
+// const data12 = "";
+// console.log(data12.filter); // undefined.
+
+const data123 = undefined;
+console.log(data123()); // error data123 is not defined
