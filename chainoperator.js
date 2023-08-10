@@ -56,4 +56,21 @@ console.log(data1); //
 // console.log(data12.filter); // undefined.
 
 const data123 = undefined;
-console.log(data123()); // error data123 is not defined
+// console.log(data123()); // error data123 is not defined
+
+// Nullish Coalescing Operator  ??
+
+// '||' (XOR) operator return first truthy value
+const name = "Vishal" || "Ram";
+const name1 = "" || null || 0 || 1 || 2 || 4;
+const data11 = null || undefined || false || "Hello";
+console.log("data11", data11);
+
+//  returns the first value whioch is defined  not defined (null , undefined)
+
+const nullish = "" ?? 0 ?? false ?? "Hello";
+console.log(nullish);
+
+const data112 = null ?? undefined ?? false;
+const aa = undefined ?? null ?? undefined;
+console.log(aa);
