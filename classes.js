@@ -117,6 +117,11 @@ class Newton {
   #printData() {
     console.log("hey", this.#studentCount);
   }
+  // you cannot access the private member
+  // all the static method are accessible through the class only not with it object
+  static increaseStudentCount(value) {
+    console.log("hey");
+  }
 }
 
 class Org extends Newton {
@@ -130,10 +135,18 @@ console.log(obj.instrutorCount); //
 obj.setStudentCount = 30;
 console.log(obj.studentCount);
 // console.log(obj.#printData()); error
-console.log(obj.printName());
+// console.log(obj.printName());
+// obj.increaseStudentCount(); error
+Newton.increaseStudentCount(100);
 
 // function Newton() {
 //   // this  => {}
 //   this.studentCount = 0;
 // }
 // const obj1 = new Newton();
+
+// Mixins
+
+// mixing a object with  class is called mising
+
+// Nullish Coalesching
