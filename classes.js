@@ -88,3 +88,26 @@ four.getMileage(400);
 console.log(four.getVehicleName());
 
 console.log(four);
+
+// Private  member and method in Javascipt classes
+
+class Newton {
+  #studentCount = 0; // class member and field
+  set setStudentCount(value) {
+    this.#studentCount = value;
+  }
+  get studentCount() {
+    return this.#studentCount;
+  }
+}
+
+const obj = new Newton();
+// console.log(obj.#studentCount); error
+obj.setStudentCount = 30;
+console.log(obj.studentCount);
+
+// function Newton() {
+//   // this  => {}
+//   this.studentCount = 0;
+// }
+// const obj1 = new Newton();
