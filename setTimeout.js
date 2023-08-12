@@ -30,12 +30,12 @@ const object = {
 };
 
 // setTimeout(object.fullName(), 1000);
-setTimeout(object.fullName, 1000);
-
+const timer1 = setTimeout(object.fullName, 1000);
+clearTimeout(timer);
+// pseudo code
 // function MysetTimeout(callback, delay) {
 //   // //if (delay) {
 //   //  callback() // function call this => window
-//console.log(data)
 //   // }
 // }
 // MysetTimeout(object.fullName, 1000);
@@ -52,3 +52,13 @@ const getUserName = () => {
 callMe();
 
 // polyfill setTimeout
+
+// setInterval
+var count = 0;
+const timer = setInterval(() => {
+  count = count + 1;
+  console.log(count);
+  if (count > 10) {
+    clearInterval(timer);
+  }
+}, 1000);
