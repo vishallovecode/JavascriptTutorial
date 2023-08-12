@@ -71,6 +71,6 @@ console.log("data11", data11);
 const nullish = "" ?? 0 ?? false ?? "Hello";
 console.log(nullish);
 
-const data112 = null ?? undefined ?? false;
+const data112 = null ?? undefined ?? false ?? "hellow d";
 const aa = undefined ?? null ?? undefined;
 console.log(aa);
