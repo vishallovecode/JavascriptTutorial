@@ -87,3 +87,25 @@ promiseObject1
   .finally(() => {
     console.log("this will call always");
   });
+
+// const data = fetch("https://dummyjson.com/products");
+// console.log("apid data", data);
+
+// data.then((res) => {
+//   console.log(res);
+// });
+
+function callbackFunc1(value) {
+  // any code
+  console.log("run if promise success");
+}
+function callbackfun2(error) {
+  // any code
+  console.log("run if promise rejected");
+}
+
+function callbackfun3() {
+  console.log("run evcerytim");
+}
+promiseObject1.then(callbackFunc1).catch(callbackfun2).finally(callbackfun3);
+// pass the function callBackfunc1 when promise resolved
