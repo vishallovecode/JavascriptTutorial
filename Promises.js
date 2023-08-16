@@ -1,15 +1,17 @@
 console.log("Learning Promises......");
 
+// Promises have three state  => Pending , fullfilled and rejected
+
 // here resolve and reject will be callback function first parameter function of Promise is called once promise resolved second will be called when promise rejected
-const promise = new Promise((res, rej) => {
+const promise = new Promise((resolved, rejected) => {
   if (2 != 2) {
-    res("Success");
+    resolved("Success");
   } else {
-    rej("Failure");
+    rejected("Failure");
   }
 });
-console.log(promise);
-console.log("hry");
+
+console.log("promise", promise);
 
 // const promise1 = new Promise();
 // console.log(promise1);
@@ -24,16 +26,31 @@ console.log("hry");
 // };
 // const promise1 = new Promise(callBack);
 
-const promise1 = new Promise((res, rej) => {
-  console.log("Hey");
+const promise1 = new Promise((resolved, rejected) => {
+  console.log("Hey called immediate"); // this is not async
   setTimeout(() => {
-    console.log("Hey123");
-    rej("Hey I am rejected");
+    console.log("Hey123 inside timeout");
+    rejected("Hey I am rejected");
   }, 4000);
 });
 
-console.log(promise1);
-// promise will never give you the result either it will give
+console.log(promise1); // pending
+
+setTimeout(() => {
+  console.log("5 second", promise1); // Rejected state
+}, 5000);
+
+// Immediate resolved promise
+const impromise = new Promise((resolved, rejected) => {
+  resolved("Hey"); // this will be consider
+  rejected("Hey"); // this will be ignore
+  resolved("1234"); //  this will be ignore
+});
+// Immediate rejected promise
+const impromiserej = new Promise((resolved, rejected) => {
+  rejected("Hey"); // this will be consider
+  resolved("hey"); // this will be ignore
+});
 
 //
 // promise1
@@ -43,7 +60,3 @@ console.log(promise1);
 //   .catch(() => {
 //     console.log("rejected");
 //   });
-
-// setTimeout(() => {
-//   console.log("5 second", promise1);
-// }, 5000);
