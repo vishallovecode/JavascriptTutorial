@@ -140,3 +140,19 @@ promise1235.then(
     console.log(error);
   }
 );
+
+const getAllProducts = () => {
+  const response = fetch("https://dummyjson.com/products");
+  response.then((res) => {
+    return res.json().then((response) => {
+      console.log("response", response);
+    });
+  });
+};
+
+getAllProducts();
+
+// diff between json and object
+const data = {
+  name: "Vishal",
+};
