@@ -21,8 +21,11 @@
     <div class="container">
 
         <h2>Search User Below</h2>
-        <input type="text" class="input" />
-        <div id='result'></div>
+        <input type="text" class="input" oninput="userInput(event)" />
+        <div id='loading' style="display: none;">Loading....</div>
+        <div id="userResult">
+
+        </div>
     </div>
     <script src="PromiseExample.js" />
 </body>
