@@ -366,3 +366,16 @@ console.log(Number("vishal123")); // NaN
 //     j--;
 //   }
 // }
+
+console.log(true == "Vishal");
+console.log(true == "1"); //  1 == '1'
+console.log(false == 0); //  true
+
+console.log(" " == ""); // false
+console.log(" " == 0); // false
+console.log(false === 0); // 0==0
+
+console.log([] == ""); // 0 == 0 // true
+console.log({} == ""); // NaN == 0 // FALSE
+console.log([] == false); // 0 == 0 // true
+console.log({} == false); // NaN == 0
