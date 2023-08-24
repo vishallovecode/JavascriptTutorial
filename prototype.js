@@ -250,3 +250,7 @@ const checkerinstance = checker.mybind(st, 1, 2, 3, 4, 5); // args1
 checkerinstance(1, 2, 3, 4); // args2
 
 // const data1 = [1,2,3]
+
+// Write  a polyfill for Promisea.all
+
+Promise.myall = function () {};
