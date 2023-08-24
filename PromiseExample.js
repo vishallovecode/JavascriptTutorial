@@ -268,3 +268,30 @@ const checker1 = Promise.myall(["check1", "check2", "check3", "check4"]);
 checker1.then((result) => {
   console.log("checker1", result);
 });
+
+Promise.myallSettled = function (promises) {
+  // here promises params is the type of array
+  const resultPromise = [];
+  return new Promise((resolved, rejected) => {
+    promises.forEach((promise, index) => {
+      if (typeof promise?.then == "function") {
+        promise
+          .then((result) => {
+            // somewhere i need to store
+            resultPromise.push({ status: "fullFilled", reason: result });
+          })
+          .catch((error) => {
+            resultPromise.push({ status: "rejected", reason: error });
+          });
+      } else {
+        resultPromise.push({ status: "fullFilled", reason: promise });
+      }
+
+      if (index === promises.length - 1) {
+        resolved(resultPromise);
+      }
+    });
+  });
+};
+
+//  Promise.race , Promisea.any
