@@ -15,13 +15,218 @@ function debounce(func, delay) {
   let timer;
   return function (...args) {
     if (!timer) {
-      func.call(this, ...args);
+      console.log(this);
+      func.ll(this, ...args);
+
       //   func.apply(this, args);
       //   func(...args)
     }
-    timer = setTimeout(() => {}, delay);
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = undefined;
+    }, delay);
   };
 }
 
 const debounceSearch = debounce(handleInputChange, 1000);
-debounceSearch("hello");
+debounceSearch("search");
+
+function debounce(fn, delay) {
+  let timeId;
+
+  return function (...args) {
+    clearTimeout(timeId);
+    timeId = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+
+function throttle(func, delay) {
+  let shouldExecute = true;
+  return function (...args) {
+    if (shouldExecute) {
+      func.apply(this, args);
+    }
+    shouldExecute = false;
+    setTimeout(() => {
+      shouldExecute = true;
+    }, delay);
+  };
+}
+
+function llMe() {
+  console.log("hey");
+}
+
+const llThrottle = throttle(llMe, 1000);
+llThrottle();
+llThrottle();
+llThrottle();
+
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+llThrottle();
+
+setTimeout(() => {
+  llThrottle();
+}, 2000);
